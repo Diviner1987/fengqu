@@ -1,0 +1,187 @@
+@charset "utf-8";
+// $middleheight:100%; //中间版心高度
+$middle_margin:0px auto; //中间版心margin值
+$top_searchheight: 87.99px; //搜索框高度
+$top_navheight:54px; //导航栏高度
+$top_navpadding:18px; //导航栏的内填充
+$flex_direction:row; //弹性盒
+$justify: space-between; //主轴
+$align:center; //侧轴
+$background_width:237px; //背景图片的宽
+$background_height:95px; //背景图片的高
+$top_search_left_mgleft:0; //搜索框左边的margin值
+$top_search_right2_width:183px; //搜索框右边的购物车宽
+$top_search_right2_height:24px; //搜索框右边的购物车高
+$top_nav_left_padding:25px; //导航栏左边的padding
+$top_nav_right_padding:16px; //导航栏右边的padding
+// 边框变量
+@mixin borderstyle($style:solid, $size:1px, $color:#ccc) {
+    border: $size $style $color;
+}
+
+//中间部分宽度
+@mixin middlewidth($middlewidth:1180px) {
+    width: $middlewidth;
+}
+
+//中间部分高度
+@mixin mainheight($mainheight:3500px) {
+    height: $mainheight;
+}
+
+// 中间单个的高度
+@mixin mainotherheight($mainheight:700px) {
+    height: $mainheight;
+}
+
+//主内容margin的底部值
+@mixin mainmarbottom($middlemarbottom:30px) {
+    margin-bottom: $middlemarbottom;
+}
+
+//弹性盒
+@mixin display($display:flex) {
+    display: flex;
+}
+
+//左浮动
+@mixin float($float:left) {
+    float: $float;
+}
+
+// 去掉列表的黑点
+@mixin list($list:none) {
+    list-style: $list;
+}
+
+//去掉a连接底下的下划线
+@mixin underline($underline:none) {
+    text-decoration: none;
+}
+
+// 中间部分
+.middle {
+    @include middlewidth;
+    // @include mainheight;
+    margin: $headermargin;
+    @include borderstyle;
+}
+
+//中间顶部搜索部分
+.top_search {
+    @include middlewidth;
+    height: $top_searchheight;
+    @include borderstyle;
+    @include display;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $flex_direction;
+    .top_search_left {
+        //搜索左边部分
+        margin-left: $top_search_left_mgleft;
+        img {
+            width: $background_width;
+            height: $background_height;
+        }
+    }
+    .top_search_right {
+        //搜索右边部分
+        justify-content: $justify;
+        align-items: $align;
+        flex-direction: $flex_direction;
+        // 搜索右边搜索框
+        // .top_search_right1 {}
+        .top_search_right2 {
+            //右边的第二部分购物车
+            .cart {
+                width: $top_search_right2_width;
+                height: $top_search_right2_height;
+                @include borderstyle;
+            }
+        }
+    }
+}
+
+// 中间顶部导航栏
+.top_nav {
+    @include middlewidth;
+    @include borderstyle;
+    height: $top_navheight;
+    // padding-top: $top_navpadding;
+    //弹性盒
+    @include display;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $flex_direction;
+}
+
+.top_nav_left {
+    //导航栏左边部分
+    li {
+        @include float;
+        @include list;
+        a {
+            padding-right: $top_nav_right_padding;
+            @include underline;
+        }
+    }
+}
+
+.top_nav_right {
+    //导航栏右边部分 
+    li {
+        @include float;
+        @include list;
+        a {
+            padding-left: $top_nav_left_padding;
+            @include underline;
+        }
+    }
+}
+
+//中间主内容
+.main {
+    @include middlewidth;
+    // @include mainheight;
+    @include borderstyle;
+}
+
+// 主内容部分1
+.main_day {
+    @include middlewidth;
+    @include mainotherheight;
+    @include borderstyle;
+    @include mainmarbottom;
+}
+
+// 主内容部分2
+.mian_face {
+    @include middlewidth;
+    @include mainotherheight;
+    @include borderstyle;
+    @include mainmarbottom;
+}
+
+// 主内容部分3
+.main_baby {
+    @include middlewidth;
+    @include mainotherheight;
+    @include borderstyle;
+    @include mainmarbottom;
+}
+
+// 主内容部分4
+.main_food {
+    @include middlewidth;
+    @include mainotherheight;
+    @include borderstyle;
+    @include mainmarbottom;
+}
+
+// 主内容部分5
+.main_digital {
+    @include middlewidth;
+    @include mainotherheight;
+    @include borderstyle;
+    @include mainmarbottom;
+}

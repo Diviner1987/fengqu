@@ -1,0 +1,93 @@
+@charset "utf-8";
+$headercolor:#3E3A39; //顶部介绍背景颜色
+$headerheight:30px; //顶部
+$headermidwidth:1180px;
+$headermargin:0px auto;
+$display:flex;
+$flexdirection:row;
+$justify: space-between;
+$align:flex-start;
+$backgroundurl:url(https://img0.fengqucdn.com/cmsres/20170329/030eede1-1185-4a2d-a2b6-c9c5a43316df.svg);
+// 底部宽度变量
+@mixin bottomwidth($bottomwidth:100%) {
+    width: $bottomwidth;
+}
+
+@mixin list($list:none) {
+    list-style: $list;
+}
+
+@mixin underline($underline:none) {
+    text-decoration: none;
+}
+
+@mixin float($float:left) {
+    float: $float;
+}
+
+@mixin color($color:#ccc) {
+    color: $color;
+}
+
+@mixin marginleft($marginleft:20px) {
+    margin-left: $marginleft;
+}
+
+@mixin marginright($marginright:20px) {
+    margin-right: $marginright;
+}
+
+@mixin lineheight($lineheight:30px) {
+    line-height: $lineheight;
+}
+
+@mixin font($font: 12px/1.14 "微软雅黑") {
+    font: $font;
+}
+
+//头部
+.header {
+    @include bottomwidth;
+    height: $headerheight;
+    margin: $headermargin;
+    background: $headercolor;
+}
+
+//头部中间的版心
+.headermid {
+    width: $headermidwidth;
+    margin: $headermargin;
+    display: $display;
+    flex-direction: row;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+//版心的左边内容
+.headermidleft {
+    @include list;
+    li {
+        @include float;
+        @include lineheight;
+        a {
+            @include font;
+            @include underline;
+            @include color;
+            @include marginleft;
+        }
+    }
+}
+
+.headermidright {
+    @include list;
+    li {
+        @include float;
+        @include lineheight;
+        a {
+            @include font;
+            @include underline;
+            @include color;
+            @include marginright;
+        }
+    }
+}

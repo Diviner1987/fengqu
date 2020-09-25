@@ -1,0 +1,40 @@
+@charset "utf-8";
+$bottomheight:350px;
+$bottom_detailh:80px;
+$bootomcolor:#3E3A39;
+$bottom_informationh:270px;
+$bottomposition1:relative;
+$bottomposition2:absolute;
+// $margintop:200px;
+// 边框变量
+@mixin borderstyle($style:solid, $size:1px, $color:#ccc) {
+    border: $size $style $color;
+}
+
+// 底部宽度变量
+@mixin bottomwidth($bottomwidth:100%) {
+    width: $bottomwidth;
+}
+
+// 底部的部分
+.bottom {
+    @include bottomwidth;
+    height: $bottomheight;
+    @include borderstyle;
+    // margin-top: $margintop;
+}
+
+// 底部的详细部分
+.bottom_detail {
+    @include bottomwidth;
+    height: $bottom_detailh;
+    @include borderstyle;
+    background: $bootomcolor;
+}
+
+// 底部的信息部分
+.bottom_information {
+    @include bottomwidth;
+    height: $bottom_informationh;
+    @include borderstyle;
+}

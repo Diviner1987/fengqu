@@ -1,0 +1,166 @@
+@charset "UTF-8";
+.header {
+  width: 100%;
+  height: 30px;
+  margin: 0px auto;
+  background: #3E3A39;
+}
+
+.headermid {
+  width: 1180px;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.headermidleft {
+  list-style: none;
+}
+.headermidleft li {
+  float: left;
+  line-height: 30px;
+}
+.headermidleft li a {
+  font: 12px/1.14 "微软雅黑";
+  text-decoration: none;
+  color: #ccc;
+  margin-left: 20px;
+}
+
+.headermidright {
+  list-style: none;
+}
+.headermidright li {
+  float: left;
+  line-height: 30px;
+}
+.headermidright li a {
+  font: 12px/1.14 "微软雅黑";
+  text-decoration: none;
+  color: #ccc;
+  margin-right: 20px;
+}
+
+.middle {
+  width: 1180px;
+  margin: 0px auto;
+  border: 1px solid #ccc;
+}
+
+.top_search {
+  width: 1180px;
+  height: 87.99px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.top_search .top_search_left {
+  margin-left: 0;
+}
+.top_search .top_search_left img {
+  width: 237px;
+  height: 95px;
+}
+.top_search .top_search_right {
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.top_search .top_search_right .top_search_right2 .cart {
+  width: 183px;
+  height: 24px;
+  border: 1px solid #ccc;
+}
+
+.top_nav {
+  width: 1180px;
+  border: 1px solid #ccc;
+  height: 54px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.top_nav_left li {
+  float: left;
+  list-style: none;
+}
+.top_nav_left li a {
+  padding-right: 16px;
+  text-decoration: none;
+}
+
+.top_nav_right li {
+  float: left;
+  list-style: none;
+}
+.top_nav_right li a {
+  padding-left: 25px;
+  text-decoration: none;
+}
+
+.main {
+  width: 1180px;
+  border: 1px solid #ccc;
+}
+
+.main_day {
+  width: 1180px;
+  height: 700px;
+  border: 1px solid #ccc;
+  margin-bottom: 30px;
+}
+
+.mian_face {
+  width: 1180px;
+  height: 700px;
+  border: 1px solid #ccc;
+  margin-bottom: 30px;
+}
+
+.main_baby {
+  width: 1180px;
+  height: 700px;
+  border: 1px solid #ccc;
+  margin-bottom: 30px;
+}
+
+.main_food {
+  width: 1180px;
+  height: 700px;
+  border: 1px solid #ccc;
+  margin-bottom: 30px;
+}
+
+.main_digital {
+  width: 1180px;
+  height: 700px;
+  border: 1px solid #ccc;
+  margin-bottom: 30px;
+}
+
+.bottom {
+  width: 100%;
+  height: 350px;
+  border: 1px solid #ccc;
+}
+
+.bottom_detail {
+  width: 100%;
+  height: 80px;
+  border: 1px solid #ccc;
+  background: #3E3A39;
+}
+
+.bottom_information {
+  width: 100%;
+  height: 270px;
+  border: 1px solid #ccc;
+}
+
+/*# sourceMappingURL=indexs.css.map */
