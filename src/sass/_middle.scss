@@ -4,7 +4,7 @@ $middle_margin:0px auto; //中间版心margin值
 $top_searchheight: 87.99px; //搜索框高度
 $top_navheight:54px; //导航栏高度
 $top_navpadding:18px; //导航栏的内填充
-$flex_direction:row; //弹性盒
+// $flex_direction:column; //弹性盒
 $justify: space-between; //主轴
 $align:center; //侧轴
 $background_width:237px; //背景图片的宽
@@ -13,9 +13,22 @@ $top_search_left_mgleft:0; //搜索框左边的margin值
 $top_search_right2_width:183px; //搜索框右边的购物车宽
 $top_search_right2_height:24px; //搜索框右边的购物车高
 $top_nav_left_padding:25px; //导航栏左边的padding
-$top_nav_right_padding:16px; //导航栏右边的padding
+$top_nav_right_padding:40px; //导航栏右边的padding
 // 边框变量
 @mixin borderstyle($style:solid, $size:1px, $color:#ccc) {
+    border: $size $style $color;
+}
+
+//给主内容的每一块的右边的ul下面的li加上下边框
+@mixin main_day_r_ulborder($style:solid, $size:1px, $color:#ccc) {
+    border-top: $size $style $color;
+}
+
+@mixin right_li1border($style:solid, $size:1px, $color:#ccc) {
+    border-top: $size $style $color;
+}
+
+@mixin hebinborder($style:none, $size:1px, $color:#fff) {
     border: $size $style $color;
 }
 
@@ -25,17 +38,16 @@ $top_nav_right_padding:16px; //导航栏右边的padding
 }
 
 //中间部分高度
-@mixin mainheight($mainheight:3500px) {
-    height: $mainheight;
-}
-
+// @mixin mainheight($mainheight:3500px) {
+//     height: $mainheight;
+// }
 // 中间单个的高度
-@mixin mainotherheight($mainheight:700px) {
-    height: $mainheight;
+@mixin mainotherheight($mainotherheight:710px) {
+    height: $mainotherheight;
 }
 
 //主内容margin的底部值
-@mixin mainmarbottom($middlemarbottom:30px) {
+@mixin mainmarbottom($middlemarbottom:21px) {
     margin-bottom: $middlemarbottom;
 }
 
@@ -59,36 +71,161 @@ $top_nav_right_padding:16px; //导航栏右边的padding
     text-decoration: none;
 }
 
-// 中间部分
+//a标签里面字体颜色
+@mixin main_nav_r_a($color:#333) {
+    color: $color;
+}
+
+//每个主内容的顶部上面的右边li的span标签内容的颜色
+@mixin main_navr_spancolor {
+    color: #ccc;
+}
+
+//主内容左边的li宽度
+@mixin main_day_left_liw($main_day_left_liw:235px) {
+    width: $main_day_left_liw;
+}
+
+//主内容左边li的高度
+@mixin main_day_left_lih($main_day_left_lih:335px) {
+    height: $main_day_left_lih;
+}
+
+// 主内容左边ul的宽度
+@mixin main_day_left_width($main_day_left_width:952px) {
+    width: $main_day_left_width;
+}
+
+// 主内容左边ul的高度
+@mixin main_day_left_height($main_day_left_height:670px) {
+    height: $main_day_left_height;
+}
+
+// 主内容右边ul的宽度
+@mixin main_day_right_width($main_day_right_width:242px) {
+    width: $main_day_right_width;
+}
+
+// 主内容右边ul的高度
+@mixin main_day_right_height($main_day_right_height:670px) {
+    height: $main_day_right_height;
+}
+
+// 主内容每一块上面的导航栏
+@mixin main_nav($main_nav:60px) {
+    height: $main_nav;
+}
+
+// 主内容下面一块的宽度
+@mixin main_day_bottom_w($main_day_bottom_w:1180px) {
+    width: $main_day_bottom_w;
+}
+
+// 主内容下面一块的高度
+@mixin main_day_bottom_h($main_day_bottom_h:983px) {
+    height: $main_day_bottom_h;
+}
+
+//主内容上下弹性盒方向
+@mixin flex_direction_tb($flex_direction_tb:column) {
+    flex-direction: $flex_direction_tb;
+}
+
+//主内容左右弹性盒方向
+@mixin flex_direction_lr($flex_direction_lr:row) {
+    flex-direction: $flex_direction_lr;
+}
+
+// 给每一块主内容的上面导航栏的右边的盒子加上内填充
+@mixin main_padding($padding:0 10px) {
+    padding: $padding;
+}
+
+// 给每一块主内容的上面导航栏的右边的盒子加上左边的margin值
+@mixin main_margin($margin:10px) {
+    margin-left: $margin;
+}
+
+//主内容顶部导航左边的字体大小
+@mixin main_top_nav_l_span($font:19px) {
+    font-size: $font;
+}
+
+//两个li合并的宽度
+@mixin hebin1($width:470px) {
+    width: $width;
+}
+
+//将另外一个li 的宽度设置成0
+@mixin hebin2($width:0) {
+    width: $width;
+}
+
+//主内容第一块的右边的上面的span的内填充
+@mixin main_day_r_span_margin($margin:60px 20px) {
+    margin: $margin;
+}
+
+//主内容第一块的右边的下面的ul的宽度
+@mixin main_day_r_ulw($width:192px) {
+    width: $width;
+}
+
+// 主内容第一块的右边的下面的ul的高度
+@mixin main_day_r_ulh($height:584px) {
+    height: $height;
+}
+
+// 主内容第一块的右边的下面的ul的li的高度
+@mixin main_day_r_li($height:116px) {
+    height: $height;
+}
+
+//主内容第一块的右边的下面的ul的li是居中的
+@mixin right_li($margin: 50px 20px) {
+    margin: $margin;
+}
+
+//每一块固定的图片宽
+@mixin imgsw($width:469px) {
+    width: $width;
+}
+
+@mixin imgsh($height:335px) {
+    height: $height;
+}
+
+// 中间部分宽和margin
 .middle {
     @include middlewidth;
     // @include mainheight;
     margin: $headermargin;
-    @include borderstyle;
+    // @include borderstyle;
 }
 
 //中间顶部搜索部分
 .top_search {
     @include middlewidth;
     height: $top_searchheight;
-    @include borderstyle;
+    // @include borderstyle;
     @include display;
     justify-content: $justify;
     align-items: $align;
-    flex-direction: $flex_direction;
+    @include flex_direction_lr;
+    //搜索左边部分
     .top_search_left {
-        //搜索左边部分
         margin-left: $top_search_left_mgleft;
         img {
             width: $background_width;
             height: $background_height;
         }
     }
+    //搜索右边部分
     .top_search_right {
-        //搜索右边部分
+        @include display;
         justify-content: $justify;
         align-items: $align;
-        flex-direction: $flex_direction;
+        @include flex_direction_lr;
         // 搜索右边搜索框
         // .top_search_right1 {}
         .top_search_right2 {
@@ -105,61 +242,239 @@ $top_nav_right_padding:16px; //导航栏右边的padding
 // 中间顶部导航栏
 .top_nav {
     @include middlewidth;
-    @include borderstyle;
+    // @include borderstyle;
     height: $top_navheight;
     // padding-top: $top_navpadding;
     //弹性盒
     @include display;
     justify-content: $justify;
     align-items: $align;
-    flex-direction: $flex_direction;
+    @include flex_direction_lr;
 }
 
+//导航栏左边部分
 .top_nav_left {
-    //导航栏左边部分
     li {
         @include float;
         @include list;
         a {
             padding-right: $top_nav_right_padding;
             @include underline;
+            @include main_nav_r_a;
         }
     }
 }
 
+//导航栏右边部分 
 .top_nav_right {
-    //导航栏右边部分 
     li {
         @include float;
         @include list;
         a {
             padding-left: $top_nav_left_padding;
             @include underline;
+            @include main_nav_r_a;
         }
     }
 }
 
-//中间主内容
+//中间主内容宽度
 .main {
     @include middlewidth;
-    // @include mainheight;
-    @include borderstyle;
+    // @include borderstyle;
+    // @include mainotherheight;
 }
 
 // 主内容部分1
 .main_day {
     @include middlewidth;
     @include mainotherheight;
-    @include borderstyle;
+    // @include borderstyle;
     @include mainmarbottom;
+    @include display;
+    justify-content: $justify;
+    align-items: $align;
+    @include flex_direction_tb;
+    //主内容1顶部导航栏
+    .main_day_top_nav {
+        @include middlewidth;
+        @include main_nav;
+        // @include borderstyle;
+        @include float;
+        @include display;
+        justify-content: $justify;
+        align-items: $align;
+        @include flex_direction_lr;
+        .main_top_nav_l {
+            @include main_top_nav_l_span;
+        } //主内容顶部导航栏左边盒子
+        .main_top_nav_r {
+            //主内容顶部导航栏右边盒子
+            // @include main_margin;
+            a {
+                @include float;
+                @include list;
+                @include underline;
+                @include main_nav_r_a;
+            }
+            span {
+                // @include main_day_r_span_padding;
+                @include float;
+                @include main_padding;
+                @include main_navr_spancolor;
+            }
+        }
+    }
+    //主内容1底部
+    .main_day_bottom {
+        @include main_day_bottom_w;
+        @include main_day_bottom_h;
+        @include display;
+        justify-content: $justify;
+        align-items: $align;
+        // @include flex_direction_lr;
+        .main_day_left {
+            //主内容底部左边
+            @include main_day_left_width;
+            @include main_day_left_height;
+            li {
+                @include borderstyle;
+                @include float;
+                @include list;
+                @include main_day_left_liw;
+                @include main_day_left_lih;
+            }
+            .hebin1 {
+                @include hebin1;
+                .imgs {
+                    @include imgsw;
+                    @include imgsh;
+                }
+            }
+            .hebin2 {
+                @include hebin2;
+                @include hebinborder;
+            }
+        }
+        .main_day_right {
+            //主内容底部右边
+            @include main_day_right_width;
+            @include main_day_right_height;
+            @include borderstyle;
+            .main_day_r_span {
+                //右边的span内填充
+                @include main_day_r_span_margin;
+            }
+            .main_day_r_ul {
+                //右边的ul 的宽高
+                @include main_day_r_ulw;
+                @include main_day_r_ulh;
+                @include right_li;
+            }
+            li {
+                //右边的li的样式
+                @include list;
+                @include main_day_r_li;
+                @include main_day_r_ulborder;
+            }
+        }
+    }
 }
 
 // 主内容部分2
-.mian_face {
+.main_face {
     @include middlewidth;
     @include mainotherheight;
     @include borderstyle;
     @include mainmarbottom;
+    @include display;
+    justify-content: $justify;
+    align-items: $align;
+    @include flex_direction_tb;
+    //主内容2顶部导航栏
+    .main_face_top_nav {
+        @include middlewidth;
+        @include main_nav;
+        @include borderstyle;
+        @include float;
+        @include display;
+        justify-content: $justify;
+        align-items: $align;
+        @include flex_direction_lr;
+        .main_top_nav_l {
+            @include main_top_nav_l_span;
+        } //主内容顶部导航栏左边盒子
+        .main_top_nav_r {
+            //主内容顶部导航栏右边盒子
+            // @include main_margin;
+            a {
+                @include float;
+                @include list;
+                @include underline;
+                @include main_nav_r_a;
+            }
+            span {
+                // @include main_day_r_span_padding;
+                @include float;
+                @include main_padding;
+                @include main_navr_spancolor;
+            }
+        }
+    }
+    //主内容2底部
+    .main_face_bottom {
+        @include main_day_bottom_w;
+        @include main_day_bottom_h;
+        @include display;
+        justify-content: $justify;
+        align-items: $align;
+        // @include flex_direction_lr;
+        .main_face_left {
+            //主内容底部左边
+            @include main_day_left_width;
+            @include main_day_left_height;
+            li {
+                @include borderstyle;
+                @include float;
+                @include list;
+                @include main_day_left_liw;
+                @include main_day_left_lih;
+            }
+            .hebin1 {
+                @include hebin1;
+                .imgs {
+                    @include imgsw;
+                    @include imgsh;
+                }
+            }
+            .hebin2 {
+                @include hebin2;
+                @include hebinborder;
+            }
+        }
+        .main_face_right {
+            //主内容底部右边
+            @include main_day_right_width;
+            @include main_day_right_height;
+            @include borderstyle;
+            .main_day_r_span {
+                //右边的span内填充
+                @include main_day_r_span_margin;
+            }
+            .main_day_r_ul {
+                //右边的ul 的宽高
+                @include main_day_r_ulw;
+                @include main_day_r_ulh;
+                @include right_li;
+            }
+            li {
+                //右边的li的样式
+                @include list;
+                @include main_day_r_li;
+                @include main_day_r_ulborder;
+            }
+        }
+    }
 }
 
 // 主内容部分3
@@ -168,6 +483,94 @@ $top_nav_right_padding:16px; //导航栏右边的padding
     @include mainotherheight;
     @include borderstyle;
     @include mainmarbottom;
+    @include display;
+    justify-content: $justify;
+    align-items: $align;
+    @include flex_direction_tb;
+    //主内容3顶部导航栏
+    .main_baby_top_nav {
+        @include middlewidth;
+        @include main_nav;
+        @include borderstyle;
+        @include float;
+        @include display;
+        justify-content: $justify;
+        align-items: $align;
+        @include flex_direction_lr;
+        .main_top_nav_l {
+            @include main_top_nav_l_span;
+        } //主内容顶部导航栏左边盒子
+        .main_top_nav_r {
+            //主内容顶部导航栏右边盒子
+            // @include main_margin;
+            a {
+                @include float;
+                @include list;
+                @include underline;
+                @include main_nav_r_a;
+            }
+            span {
+                // @include main_day_r_span_padding;
+                @include float;
+                @include main_padding;
+                @include main_navr_spancolor;
+            }
+        }
+    }
+    //主内容3底部
+    .main_baby_bottom {
+        @include main_day_bottom_w;
+        @include main_day_bottom_h;
+        @include display;
+        justify-content: $justify;
+        align-items: $align;
+        // @include flex_direction_lr;
+        .main_baby_left {
+            //主内容底部左边
+            @include main_day_left_width;
+            @include main_day_left_height;
+            li {
+                @include borderstyle;
+                @include float;
+                @include list;
+                @include main_day_left_liw;
+                @include main_day_left_lih;
+            }
+            .hebin1 {
+                @include hebin1;
+                .imgs {
+                    @include imgsw;
+                    @include imgsh;
+                }
+            }
+            .hebin2 {
+                @include hebin2;
+                @include hebinborder;
+            }
+        }
+        .main_baby_right {
+            //主内容底部右边
+            @include main_day_right_width;
+            @include main_day_right_height;
+            @include borderstyle;
+        }
+        .main_day_r_span {
+            //右边的span内填充
+            @include main_day_r_span_margin;
+        }
+        .main_day_r_ul {
+            //右边的ul 的宽高
+            @include main_day_r_ulw;
+            @include main_day_r_ulh;
+            @include right_li;
+        }
+        li {
+            //右边的li的样式
+            @include list;
+            @include main_day_r_li;
+            @include main_day_r_ulborder;
+        }
+    }
 }
 
 // 主内容部分4
@@ -176,6 +579,94 @@ $top_nav_right_padding:16px; //导航栏右边的padding
     @include mainotherheight;
     @include borderstyle;
     @include mainmarbottom;
+    @include display;
+    justify-content: $justify;
+    align-items: $align;
+    @include flex_direction_tb;
+    //主内容4顶部导航栏
+    .main_food_top_nav {
+        @include middlewidth;
+        @include main_nav;
+        @include borderstyle;
+        @include float;
+        @include display;
+        justify-content: $justify;
+        align-items: $align;
+        @include flex_direction_lr;
+        .main_top_nav_l {
+            @include main_top_nav_l_span;
+        } //主内容顶部导航栏左边盒子
+        .main_top_nav_r {
+            //主内容顶部导航栏右边盒子
+            // @include main_margin;
+            a {
+                @include float;
+                @include list;
+                @include underline;
+                @include main_nav_r_a;
+            }
+            span {
+                // @include main_day_r_span_padding;
+                @include float;
+                @include main_padding;
+                @include main_navr_spancolor;
+            }
+        }
+    }
+    //主内容4底部
+    .main_food_bottom {
+        @include main_day_bottom_w;
+        @include main_day_bottom_h;
+        @include display;
+        justify-content: $justify;
+        align-items: $align;
+        // @include flex_direction_lr;
+        .main_food_left {
+            //主内容底部左边
+            @include main_day_left_width;
+            @include main_day_left_height;
+            li {
+                @include borderstyle;
+                @include float;
+                @include list;
+                @include main_day_left_liw;
+                @include main_day_left_lih;
+            }
+            .hebin1 {
+                @include hebin1;
+                .imgs {
+                    @include imgsw;
+                    @include imgsh;
+                }
+            }
+            .hebin2 {
+                @include hebin2;
+                @include hebinborder;
+            }
+        }
+        .main_food_right {
+            //主内容底部右边
+            @include main_day_right_width;
+            @include main_day_right_height;
+            @include borderstyle;
+        }
+        .main_day_r_span {
+            //右边的span内填充
+            @include main_day_r_span_margin;
+        }
+        .main_day_r_ul {
+            //右边的ul 的宽高
+            @include main_day_r_ulw;
+            @include main_day_r_ulh;
+            @include right_li;
+        }
+        li {
+            //右边的li的样式
+            @include list;
+            @include main_day_r_li;
+            @include main_day_r_ulborder;
+        }
+    }
 }
 
 // 主内容部分5
@@ -184,4 +675,92 @@ $top_nav_right_padding:16px; //导航栏右边的padding
     @include mainotherheight;
     @include borderstyle;
     @include mainmarbottom;
+    @include display;
+    justify-content: $justify;
+    align-items: $align;
+    @include flex_direction_tb;
+    //主内容5顶部导航栏
+    .main_digital_top_nav {
+        @include middlewidth;
+        @include main_nav;
+        @include borderstyle;
+        @include float;
+        @include display;
+        justify-content: $justify;
+        align-items: $align;
+        @include flex_direction_lr;
+        //主内容顶部导航栏左边盒子
+        .main_top_nav_l {
+            @include main_top_nav_l_span;
+        }
+        //主内容顶部导航栏右边盒子
+        .main_top_nav_r {
+            a {
+                @include float;
+                @include list;
+                @include underline;
+                @include main_nav_r_a;
+            }
+            span {
+                @include float;
+                @include main_padding;
+                @include main_navr_spancolor;
+            }
+        }
+    }
+    //主内容5底部
+    .main_digital_bottom {
+        @include main_day_bottom_w;
+        @include main_day_bottom_h;
+        @include display;
+        justify-content: $justify;
+        align-items: $align;
+        // @include flex_direction_lr;
+        //主内容底部左边
+        .main_digital_left {
+            @include main_day_left_width;
+            @include main_day_left_height;
+            li {
+                @include borderstyle;
+                @include float;
+                @include list;
+                @include main_day_left_liw;
+                @include main_day_left_lih;
+            }
+            .hebin1 {
+                @include hebin1;
+                //图片的宽高
+                .imgs {
+                    @include imgsw;
+                    @include imgsh;
+                }
+            }
+            .hebin2 {
+                @include hebin2;
+                @include hebinborder;
+            }
+        }
+        //主内容底部右边
+        .main_digital_right {
+            @include main_day_right_width;
+            @include main_day_right_height;
+            @include borderstyle;
+        }
+        //右边的span内填充
+        .main_day_r_span {
+            @include main_day_r_span_margin;
+        }
+        //右边的ul 的宽高
+        .main_day_r_ul {
+            @include main_day_r_ulw;
+            @include main_day_r_ulh;
+            @include right_li;
+        }
+        //右边的li的样式
+        li {
+            @include list;
+            @include main_day_r_li;
+            @include main_day_r_ulborder;
+        }
+    }
 }

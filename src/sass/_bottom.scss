@@ -1,11 +1,12 @@
 @charset "utf-8";
-$bottomheight:350px;
-$bottom_detailh:80px;
-$bootomcolor:#3E3A39;
-$bottom_informationh:270px;
-$bottomposition1:relative;
-$bottomposition2:absolute;
-// $margintop:200px;
+$bottomheight:350px; //底部的高度
+$bottom_detailh:80px; //底部详细介绍的高度
+$bootomcolor:#3E3A39; //底部详细介绍的颜色
+$bottom_informationh:270px; //底部咨询信息的高度
+$bottomposition1:relative; //相对定位
+$bottomposition2:absolute; //绝对定位
+$bottom_detail_width: 1180px;
+$bottom_detail_height:54px;
 // 边框变量
 @mixin borderstyle($style:solid, $size:1px, $color:#ccc) {
     border: $size $style $color;
@@ -16,12 +17,37 @@ $bottomposition2:absolute;
     width: $bottomwidth;
 }
 
+//清除列表的黑点
+@mixin list($list:none) {
+    list-style: $list;
+}
+
+//清除a标签的下划线
+@mixin underline($underline:none) {
+    text-decoration: none;
+}
+
+//左浮动
+@mixin float($float:left) {
+    float: $float;
+}
+
+//li标签里面文字内容的颜色
+@mixin color($color:#fff) {
+    color: $color;
+}
+
+//底部上面部分的margin值
+@mixin margin($margin:10px auto) {
+    margin: $margin;
+}
+
+//底部上面部分li里面内容的文字大小
 // 底部的部分
 .bottom {
     @include bottomwidth;
     height: $bottomheight;
     @include borderstyle;
-    // margin-top: $margintop;
 }
 
 // 底部的详细部分
@@ -30,9 +56,19 @@ $bottomposition2:absolute;
     height: $bottom_detailh;
     @include borderstyle;
     background: $bootomcolor;
+    ul {
+        width: $bottom_detail_width;
+        height: $bottom_detail_height;
+        @include margin;
+        li {
+            @include list;
+            @include float;
+            @include color;
+        }
+    }
 }
 
-// 底部的信息部分
+// 底部的咨询信息部分
 .bottom_information {
     @include bottomwidth;
     height: $bottom_informationh;
