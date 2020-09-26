@@ -12,6 +12,15 @@ $bottom_detail_height:54px;
     border: $size $style $color;
 }
 
+//li的右边边框
+@mixin border-right($style:solid, $size:1px, $color:#ccc) {
+    border-right: $size $style $color;
+}
+
+@mixin border-rights($border:none) {
+    border-right: $border;
+}
+
 // 底部宽度变量
 @mixin bottomwidth($bottomwidth:100%) {
     width: $bottomwidth;
@@ -42,7 +51,31 @@ $bottom_detail_height:54px;
     margin: $margin;
 }
 
-//底部上面部分li里面内容的文字大小
+//li里面的内容进行水平居中
+@mixin text-align($align:center) {
+    text-align: $align;
+}
+
+//li里面的内容进行垂直居中
+@mixin line-height($line:54px) {
+    line-height: $line;
+}
+
+//li里面内容的右边margin值
+@mixin detail_margin_r($margin:25px) {
+    margin-right: $margin;
+}
+
+//li里面内容的左边margin值
+@mixin detail_margin_l($margin:45px) {
+    margin-left: $margin;
+}
+
+//li里面内容的padding值
+@mixin detail_padding($padding:25px) {
+    padding-right: $padding;
+}
+
 // 底部的部分
 .bottom {
     @include bottomwidth;
@@ -64,6 +97,19 @@ $bottom_detail_height:54px;
             @include list;
             @include float;
             @include color;
+            @include text-align;
+            @include line-height;
+            @include border-right;
+            // @include detail_margin_r;
+            @include detail_padding;
+            span {
+                //图片的span标签
+                @include detail_margin_r;
+                @include detail_margin_l;
+            }
+        }
+        .detail_li {
+            @include border-rights;
         }
     }
 }
