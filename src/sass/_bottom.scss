@@ -76,6 +76,21 @@ $bottom_detail_height:54px;
     padding-right: $padding;
 }
 
+//声明弹性盒的
+@mixin display($display:flex) {
+    display: flex;
+}
+
+//弹性盒从上往下的方向
+@mixin flex_direction_tb($flex_direction_tb:column) {
+    flex-direction: $flex_direction_tb;
+}
+
+//弹性盒从左往右的方向
+@mixin flex_direction_lr($flex_direction_lr:row) {
+    flex-direction: $flex_direction_lr;
+}
+
 // 底部的部分
 .bottom {
     @include bottomwidth;

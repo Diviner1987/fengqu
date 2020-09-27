@@ -13,6 +13,7 @@ $backgroundurl:url(https://img0.fengqucdn.com/cmsres/20170329/030eede1-1185-4a2d
     width: $bottomwidth;
 }
 
+//
 @mixin list($list:none) {
     list-style: $list;
 }
@@ -78,6 +79,7 @@ $backgroundurl:url(https://img0.fengqucdn.com/cmsres/20170329/030eede1-1185-4a2d
     }
 }
 
+//版心的右边内容
 .headermidright {
     @include list;
     li {

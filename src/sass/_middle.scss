@@ -5,8 +5,8 @@ $top_searchheight: 87.99px; //搜索框高度
 $top_navheight:54px; //导航栏高度
 $top_navpadding:18px; //导航栏的内填充
 // $flex_direction:column; //弹性盒
-$justify: space-between; //主轴
-$align:center; //侧轴
+$justify: space-between; //主轴两边没有空隙
+$align:center; //侧轴居中
 $background_width:237px; //背景图片的宽
 $background_height:95px; //背景图片的高
 $top_search_left_mgleft:0; //搜索框左边的margin值
@@ -19,15 +19,17 @@ $top_nav_right_padding:40px; //导航栏右边的padding
     border: $size $style $color;
 }
 
-//给主内容的每一块的右边的ul下面的li加上下边框
+//给主内容的每一块的右边的ul下面的li加上上边框
 @mixin main_day_r_ulborder($style:solid, $size:1px, $color:#ccc) {
     border-top: $size $style $color;
 }
 
+//给主内容的每一块的右边的ul下面的li加上上边框
 @mixin right_li1border($style:solid, $size:1px, $color:#ccc) {
     border-top: $size $style $color;
 }
 
+//合并的外边框
 @mixin hebinborder($style:none, $size:1px, $color:#fff) {
     border: $size $style $color;
 }
@@ -37,10 +39,6 @@ $top_nav_right_padding:40px; //导航栏右边的padding
     width: $middlewidth;
 }
 
-//中间部分高度
-// @mixin mainheight($mainheight:3500px) {
-//     height: $mainheight;
-// }
 // 中间单个的高度
 @mixin mainotherheight($mainotherheight:710px) {
     height: $mainotherheight;
@@ -82,7 +80,7 @@ $top_nav_right_padding:40px; //导航栏右边的padding
 }
 
 //主内容左边的li宽度
-@mixin main_day_left_liw($main_day_left_liw:235px) {
+@mixin main_day_left_liw($main_day_left_liw:238px) {
     width: $main_day_left_liw;
 }
 
@@ -162,7 +160,7 @@ $top_nav_right_padding:40px; //导航栏右边的padding
 }
 
 //主内容第一块的右边的上面的span的内填充
-@mixin main_day_r_span_margin($margin:60px 20px) {
+@mixin main_day_r_span_margin($margin:60px 5px) {
     margin: $margin;
 }
 
@@ -187,12 +185,94 @@ $top_nav_right_padding:40px; //导航栏右边的padding
 }
 
 //每一块固定的图片宽
-@mixin imgsw($width:469px) {
+@mixin imgw($width:465px) {
     width: $width;
 }
 
-@mixin imgsh($height:335px) {
+//每一块固定的图片高
+@mixin imgh($height:335px) {
     height: $height;
+}
+
+//渲染的li的图片的宽度
+@mixin imgsw($width:238px) {
+    width: $width;
+}
+
+//渲染的li的图片的高度
+@mixin imgsh($height:195px) {
+    height: $height;
+}
+
+//li里面的内容进行水平居中
+@mixin text-align($align:center) {
+    text-align: $align;
+}
+
+//li里面的内容进行垂直居中
+@mixin line-height($line:54px) {
+    line-height: $line;
+}
+
+//价格的颜色
+@mixin price_color($color:red) {
+    color: $color;
+}
+
+//价格的margin值
+@mixin price_margin($margin:80px) {
+    margin-left: $margin;
+}
+
+//每个单独li里面的图片的margin值
+@mixin img_margin($margin:20px) {
+    margin-left: $margin;
+}
+
+//海外代购的图片的宽
+@mixin seabuy_widht($width:70px) {
+    width: $width;
+}
+
+//海外代购的图片的高
+@mixin seabuy_height($height:70px) {
+    height: $height;
+}
+
+//出现省略号的四步
+//第一步设置一定的宽度
+@mixin ellipsis_width($width:120px) {
+    width: $width;
+}
+
+//第二步强制不要换行
+@mixin white-space($white-space:nowrap) {
+    white-space: nowrap;
+}
+
+//第三步溢出隐藏
+@mixin overflow-hidden($overflow:hidden) {
+    overflow: $overflow;
+}
+
+//第四步显示省略号
+@mixin text-overflow($text:ellipsis) {
+    text-overflow: $text;
+}
+
+//盒子转变成为可以加宽高的标签
+@mixin inline-block($inline:inline-block) {
+    display: $inline;
+}
+
+//主内容块的图片的定位
+@mixin position($position:absolute) {
+    position: $position;
+}
+
+//主内容块的图片的定位
+@mixin pos_top($pos_top:213px) {
+    top: $pos_top;
 }
 
 // 中间部分宽和margin
@@ -329,14 +409,13 @@ $top_nav_right_padding:40px; //导航栏右边的padding
     .main_day_bottom {
         @include main_day_bottom_w;
         @include main_day_bottom_h;
-        @include display;
-        justify-content: $justify;
-        align-items: $align;
-        // @include flex_direction_lr;
+        .img_guding {
+            @include position;
+            @include pos_top;
+            @include list;
+        }
+        //主内容底部左边       
         .main_day_left {
-            //主内容底部左边
-            @include main_day_left_width;
-            @include main_day_left_height;
             li {
                 @include borderstyle;
                 @include float;
@@ -344,20 +423,30 @@ $top_nav_right_padding:40px; //导航栏右边的padding
                 @include main_day_left_liw;
                 @include main_day_left_lih;
             }
-            .hebin1 {
-                @include hebin1;
+            li:first-child {
+                margin-left: 476px;
+            }
+            .li_imgs {
                 .imgs {
                     @include imgsw;
                     @include imgsh;
+                    @include img_margin;
+                }
+                .title {
+                    @include text-align;
+                    @include line-height;
+                }
+                .price {
+                    @include text-align;
+                    @include line-height;
+                    @include price_color;
+                    @include price_margin;
                 }
             }
-            .hebin2 {
-                @include hebin2;
-                @include hebinborder;
-            }
         }
+        //固定的图片的样式
+        //主内容底部右边
         .main_day_right {
-            //主内容底部右边
             @include main_day_right_width;
             @include main_day_right_height;
             @include borderstyle;
@@ -370,12 +459,37 @@ $top_nav_right_padding:40px; //导航栏右边的padding
                 @include main_day_r_ulw;
                 @include main_day_r_ulh;
                 @include right_li;
+                float: right;
+                 ::after {
+                    content: '.';
+                    display: block;
+                    height: 0;
+                    overflow: hidden;
+                    visibility: hidden;
+                    clear: both;
+                }
             }
             li {
                 //右边的li的样式
                 @include list;
                 @include main_day_r_li;
                 @include main_day_r_ulborder;
+            }
+            .seabuy {
+                @include seabuy_widht;
+                @include seabuy_height;
+            }
+            //段落的显示省略号
+            .seabuy_p_dot {
+                @include ellipsis_width;
+                @include white-space;
+                @include overflow-hidden;
+                @include text-overflow;
+                @include line-height;
+            }
+            //海外代购价钱的颜色
+            .seabuy_color .seabuy_span_color {
+                @include price_color;
             }
         }
     }
@@ -385,7 +499,6 @@ $top_nav_right_padding:40px; //导航栏右边的padding
 .main_face {
     @include middlewidth;
     @include mainotherheight;
-    @include borderstyle;
     @include mainmarbottom;
     @include display;
     justify-content: $justify;
@@ -395,17 +508,17 @@ $top_nav_right_padding:40px; //导航栏右边的padding
     .main_face_top_nav {
         @include middlewidth;
         @include main_nav;
-        @include borderstyle;
         @include float;
         @include display;
         justify-content: $justify;
         align-items: $align;
         @include flex_direction_lr;
+        //主内容顶部导航栏左边盒子
         .main_top_nav_l {
             @include main_top_nav_l_span;
-        } //主内容顶部导航栏左边盒子
+        }
+        //主内容顶部导航栏右边盒子
         .main_top_nav_r {
-            //主内容顶部导航栏右边盒子
             // @include main_margin;
             a {
                 @include float;
@@ -429,8 +542,8 @@ $top_nav_right_padding:40px; //导航栏右边的padding
         justify-content: $justify;
         align-items: $align;
         // @include flex_direction_lr;
+        //主内容底部左边
         .main_face_left {
-            //主内容底部左边
             @include main_day_left_width;
             @include main_day_left_height;
             li {
@@ -443,17 +556,34 @@ $top_nav_right_padding:40px; //导航栏右边的padding
             .hebin1 {
                 @include hebin1;
                 .imgs {
-                    @include imgsw;
-                    @include imgsh;
+                    @include imgw;
+                    @include imgh;
                 }
             }
             .hebin2 {
                 @include hebin2;
                 @include hebinborder;
             }
+            .li_imgs {
+                .imgs {
+                    @include imgsw;
+                    @include imgsh;
+                    @include img_margin;
+                }
+                .title {
+                    @include text-align;
+                    @include line-height;
+                }
+                .price {
+                    @include text-align;
+                    @include line-height;
+                    @include price_color;
+                    @include price_margin;
+                }
+            }
         }
+        //主内容底部右边
         .main_face_right {
-            //主内容底部右边
             @include main_day_right_width;
             @include main_day_right_height;
             @include borderstyle;
@@ -473,6 +603,22 @@ $top_nav_right_padding:40px; //导航栏右边的padding
                 @include main_day_r_li;
                 @include main_day_r_ulborder;
             }
+            .seabuy {
+                @include seabuy_widht;
+                @include seabuy_height;
+            }
+            //段落的显示省略号
+            .seabuy_p_dot {
+                @include ellipsis_width;
+                @include white-space;
+                @include overflow-hidden;
+                @include text-overflow;
+                @include line-height;
+            }
+            //海外代购价钱的颜色
+            .seabuy_color .seabuy_span_color {
+                @include price_color;
+            }
         }
     }
 }
@@ -481,7 +627,7 @@ $top_nav_right_padding:40px; //导航栏右边的padding
 .main_baby {
     @include middlewidth;
     @include mainotherheight;
-    @include borderstyle;
+    // @include borderstyle;
     @include mainmarbottom;
     @include display;
     justify-content: $justify;
@@ -491,7 +637,7 @@ $top_nav_right_padding:40px; //导航栏右边的padding
     .main_baby_top_nav {
         @include middlewidth;
         @include main_nav;
-        @include borderstyle;
+        // @include borderstyle;
         @include float;
         @include display;
         justify-content: $justify;
@@ -539,13 +685,30 @@ $top_nav_right_padding:40px; //导航栏右边的padding
             .hebin1 {
                 @include hebin1;
                 .imgs {
-                    @include imgsw;
-                    @include imgsh;
+                    @include imgw;
+                    @include imgh;
                 }
             }
             .hebin2 {
                 @include hebin2;
                 @include hebinborder;
+            }
+            .li_imgs {
+                .imgs {
+                    @include imgsw;
+                    @include imgsh;
+                    @include img_margin;
+                }
+                .title {
+                    @include text-align;
+                    @include line-height;
+                }
+                .price {
+                    @include text-align;
+                    @include line-height;
+                    @include price_color;
+                    @include price_margin;
+                }
             }
         }
         .main_baby_right {
@@ -570,6 +733,22 @@ $top_nav_right_padding:40px; //导航栏右边的padding
             @include main_day_r_li;
             @include main_day_r_ulborder;
         }
+        .seabuy {
+            @include seabuy_widht;
+            @include seabuy_height;
+        }
+        //段落的显示省略号
+        .seabuy_p_dot {
+            @include ellipsis_width;
+            @include white-space;
+            @include overflow-hidden;
+            @include text-overflow;
+            @include line-height;
+        }
+        //海外代购价钱的颜色
+        .seabuy_color .seabuy_span_color {
+            @include price_color;
+        }
     }
 }
 
@@ -577,7 +756,7 @@ $top_nav_right_padding:40px; //导航栏右边的padding
 .main_food {
     @include middlewidth;
     @include mainotherheight;
-    @include borderstyle;
+    // @include borderstyle;
     @include mainmarbottom;
     @include display;
     justify-content: $justify;
@@ -587,7 +766,7 @@ $top_nav_right_padding:40px; //导航栏右边的padding
     .main_food_top_nav {
         @include middlewidth;
         @include main_nav;
-        @include borderstyle;
+        // @include borderstyle;
         @include float;
         @include display;
         justify-content: $justify;
@@ -635,13 +814,30 @@ $top_nav_right_padding:40px; //导航栏右边的padding
             .hebin1 {
                 @include hebin1;
                 .imgs {
-                    @include imgsw;
-                    @include imgsh;
+                    @include imgw;
+                    @include imgh;
                 }
             }
             .hebin2 {
                 @include hebin2;
                 @include hebinborder;
+            }
+            .li_imgs {
+                .imgs {
+                    @include imgsw;
+                    @include imgsh;
+                    @include img_margin;
+                }
+                .title {
+                    @include text-align;
+                    @include line-height;
+                }
+                .price {
+                    @include text-align;
+                    @include line-height;
+                    @include price_color;
+                    @include price_margin;
+                }
             }
         }
         .main_food_right {
@@ -666,6 +862,22 @@ $top_nav_right_padding:40px; //导航栏右边的padding
             @include main_day_r_li;
             @include main_day_r_ulborder;
         }
+        .seabuy {
+            @include seabuy_widht;
+            @include seabuy_height;
+        }
+        //段落的显示省略号
+        .seabuy_p_dot {
+            @include ellipsis_width;
+            @include white-space;
+            @include overflow-hidden;
+            @include text-overflow;
+            @include line-height;
+        }
+        //海外代购价钱的颜色
+        .seabuy_color .seabuy_span_color {
+            @include price_color;
+        }
     }
 }
 
@@ -673,7 +885,7 @@ $top_nav_right_padding:40px; //导航栏右边的padding
 .main_digital {
     @include middlewidth;
     @include mainotherheight;
-    @include borderstyle;
+    // @include borderstyle;
     @include mainmarbottom;
     @include display;
     justify-content: $justify;
@@ -683,7 +895,7 @@ $top_nav_right_padding:40px; //导航栏右边的padding
     .main_digital_top_nav {
         @include middlewidth;
         @include main_nav;
-        @include borderstyle;
+        // @include borderstyle;
         @include float;
         @include display;
         justify-content: $justify;
@@ -731,13 +943,30 @@ $top_nav_right_padding:40px; //导航栏右边的padding
                 @include hebin1;
                 //图片的宽高
                 .imgs {
-                    @include imgsw;
-                    @include imgsh;
+                    @include imgw;
+                    @include imgh;
                 }
             }
             .hebin2 {
                 @include hebin2;
                 @include hebinborder;
+            }
+            .li_imgs {
+                .imgs {
+                    @include imgsw;
+                    @include imgsh;
+                    @include img_margin;
+                }
+                .title {
+                    @include text-align;
+                    @include line-height;
+                }
+                .price {
+                    @include text-align;
+                    @include line-height;
+                    @include price_color;
+                    @include price_margin;
+                }
             }
         }
         //主内容底部右边
@@ -757,10 +986,31 @@ $top_nav_right_padding:40px; //导航栏右边的padding
             @include right_li;
         }
         //右边的li的样式
-        li {
+        .main_day_r_ul li {
             @include list;
             @include main_day_r_li;
             @include main_day_r_ulborder;
+            @include display; //弹性盒
+            justify-content: $justify; //主轴
+            align-items: $align;
+            @include flex_direction_lr;
+            //海外代购的图片宽高
+            .seabuy {
+                @include seabuy_widht;
+                @include seabuy_height;
+            }
+            //段落的显示省略号
+            .seabuy_p_dot {
+                @include ellipsis_width;
+                @include white-space;
+                @include overflow-hidden;
+                @include text-overflow;
+                @include line-height;
+            }
+            //海外代购价钱的颜色
+            .seabuy_color .seabuy_span_color {
+                @include price_color;
+            }
         }
     }
 }

@@ -143,31 +143,36 @@
 .main_day .main_day_bottom {
   width: 1180px;
   height: 983px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
-.main_day .main_day_bottom .main_day_left {
-  width: 952px;
-  height: 670px;
+.main_day .main_day_bottom .img_guding {
+  position: absolute;
+  top: 213px;
+  list-style: none;
 }
 .main_day .main_day_bottom .main_day_left li {
   border: 1px solid #ccc;
   float: left;
   list-style: none;
-  width: 235px;
+  width: 238px;
   height: 335px;
 }
-.main_day .main_day_bottom .main_day_left .hebin1 {
-  width: 470px;
+.main_day .main_day_bottom .main_day_left li:first-child {
+  margin-left: 476px;
 }
-.main_day .main_day_bottom .main_day_left .hebin1 .imgs {
-  width: 469px;
-  height: 335px;
+.main_day .main_day_bottom .main_day_left .li_imgs .imgs {
+  width: 238px;
+  height: 195px;
+  margin-left: 20px;
 }
-.main_day .main_day_bottom .main_day_left .hebin2 {
-  width: 0;
-  border: 1px none #fff;
+.main_day .main_day_bottom .main_day_left .li_imgs .title {
+  text-align: center;
+  line-height: 54px;
+}
+.main_day .main_day_bottom .main_day_left .li_imgs .price {
+  text-align: center;
+  line-height: 54px;
+  color: red;
+  margin-left: 80px;
 }
 .main_day .main_day_bottom .main_day_right {
   width: 242px;
@@ -175,23 +180,45 @@
   border: 1px solid #ccc;
 }
 .main_day .main_day_bottom .main_day_right .main_day_r_span {
-  margin: 60px 20px;
+  margin: 60px 5px;
 }
 .main_day .main_day_bottom .main_day_right .main_day_r_ul {
   width: 192px;
   height: 584px;
   margin: 50px 20px;
+  float: right;
+}
+.main_day .main_day_bottom .main_day_right .main_day_r_ul ::after {
+  content: '.';
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  clear: both;
 }
 .main_day .main_day_bottom .main_day_right li {
   list-style: none;
   height: 116px;
   border-top: 1px solid #ccc;
 }
+.main_day .main_day_bottom .main_day_right .seabuy {
+  width: 70px;
+  height: 70px;
+}
+.main_day .main_day_bottom .main_day_right .seabuy_p_dot {
+  width: 120px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 54px;
+}
+.main_day .main_day_bottom .main_day_right .seabuy_color .seabuy_span_color {
+  color: red;
+}
 
 .main_face {
   width: 1180px;
   height: 710px;
-  border: 1px solid #ccc;
   margin-bottom: 21px;
   display: flex;
   justify-content: space-between;
@@ -201,7 +228,6 @@
 .main_face .main_face_top_nav {
   width: 1180px;
   height: 60px;
-  border: 1px solid #ccc;
   float: left;
   display: flex;
   justify-content: space-between;
@@ -237,19 +263,34 @@
   border: 1px solid #ccc;
   float: left;
   list-style: none;
-  width: 235px;
+  width: 238px;
   height: 335px;
 }
 .main_face .main_face_bottom .main_face_left .hebin1 {
   width: 470px;
 }
 .main_face .main_face_bottom .main_face_left .hebin1 .imgs {
-  width: 469px;
+  width: 465px;
   height: 335px;
 }
 .main_face .main_face_bottom .main_face_left .hebin2 {
   width: 0;
   border: 1px none #fff;
+}
+.main_face .main_face_bottom .main_face_left .li_imgs .imgs {
+  width: 238px;
+  height: 195px;
+  margin-left: 20px;
+}
+.main_face .main_face_bottom .main_face_left .li_imgs .title {
+  text-align: center;
+  line-height: 54px;
+}
+.main_face .main_face_bottom .main_face_left .li_imgs .price {
+  text-align: center;
+  line-height: 54px;
+  color: red;
+  margin-left: 80px;
 }
 .main_face .main_face_bottom .main_face_right {
   width: 242px;
@@ -257,7 +298,7 @@
   border: 1px solid #ccc;
 }
 .main_face .main_face_bottom .main_face_right .main_day_r_span {
-  margin: 60px 20px;
+  margin: 60px 5px;
 }
 .main_face .main_face_bottom .main_face_right .main_day_r_ul {
   width: 192px;
@@ -269,11 +310,24 @@
   height: 116px;
   border-top: 1px solid #ccc;
 }
+.main_face .main_face_bottom .main_face_right .seabuy {
+  width: 70px;
+  height: 70px;
+}
+.main_face .main_face_bottom .main_face_right .seabuy_p_dot {
+  width: 120px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 54px;
+}
+.main_face .main_face_bottom .main_face_right .seabuy_color .seabuy_span_color {
+  color: red;
+}
 
 .main_baby {
   width: 1180px;
   height: 710px;
-  border: 1px solid #ccc;
   margin-bottom: 21px;
   display: flex;
   justify-content: space-between;
@@ -283,7 +337,6 @@
 .main_baby .main_baby_top_nav {
   width: 1180px;
   height: 60px;
-  border: 1px solid #ccc;
   float: left;
   display: flex;
   justify-content: space-between;
@@ -319,19 +372,34 @@
   border: 1px solid #ccc;
   float: left;
   list-style: none;
-  width: 235px;
+  width: 238px;
   height: 335px;
 }
 .main_baby .main_baby_bottom .main_baby_left .hebin1 {
   width: 470px;
 }
 .main_baby .main_baby_bottom .main_baby_left .hebin1 .imgs {
-  width: 469px;
+  width: 465px;
   height: 335px;
 }
 .main_baby .main_baby_bottom .main_baby_left .hebin2 {
   width: 0;
   border: 1px none #fff;
+}
+.main_baby .main_baby_bottom .main_baby_left .li_imgs .imgs {
+  width: 238px;
+  height: 195px;
+  margin-left: 20px;
+}
+.main_baby .main_baby_bottom .main_baby_left .li_imgs .title {
+  text-align: center;
+  line-height: 54px;
+}
+.main_baby .main_baby_bottom .main_baby_left .li_imgs .price {
+  text-align: center;
+  line-height: 54px;
+  color: red;
+  margin-left: 80px;
 }
 .main_baby .main_baby_bottom .main_baby_right {
   width: 242px;
@@ -339,7 +407,7 @@
   border: 1px solid #ccc;
 }
 .main_baby .main_baby_bottom .main_day_r_span {
-  margin: 60px 20px;
+  margin: 60px 5px;
 }
 .main_baby .main_baby_bottom .main_day_r_ul {
   width: 192px;
@@ -351,11 +419,24 @@
   height: 116px;
   border-top: 1px solid #ccc;
 }
+.main_baby .main_baby_bottom .seabuy {
+  width: 70px;
+  height: 70px;
+}
+.main_baby .main_baby_bottom .seabuy_p_dot {
+  width: 120px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 54px;
+}
+.main_baby .main_baby_bottom .seabuy_color .seabuy_span_color {
+  color: red;
+}
 
 .main_food {
   width: 1180px;
   height: 710px;
-  border: 1px solid #ccc;
   margin-bottom: 21px;
   display: flex;
   justify-content: space-between;
@@ -365,7 +446,6 @@
 .main_food .main_food_top_nav {
   width: 1180px;
   height: 60px;
-  border: 1px solid #ccc;
   float: left;
   display: flex;
   justify-content: space-between;
@@ -401,19 +481,34 @@
   border: 1px solid #ccc;
   float: left;
   list-style: none;
-  width: 235px;
+  width: 238px;
   height: 335px;
 }
 .main_food .main_food_bottom .main_food_left .hebin1 {
   width: 470px;
 }
 .main_food .main_food_bottom .main_food_left .hebin1 .imgs {
-  width: 469px;
+  width: 465px;
   height: 335px;
 }
 .main_food .main_food_bottom .main_food_left .hebin2 {
   width: 0;
   border: 1px none #fff;
+}
+.main_food .main_food_bottom .main_food_left .li_imgs .imgs {
+  width: 238px;
+  height: 195px;
+  margin-left: 20px;
+}
+.main_food .main_food_bottom .main_food_left .li_imgs .title {
+  text-align: center;
+  line-height: 54px;
+}
+.main_food .main_food_bottom .main_food_left .li_imgs .price {
+  text-align: center;
+  line-height: 54px;
+  color: red;
+  margin-left: 80px;
 }
 .main_food .main_food_bottom .main_food_right {
   width: 242px;
@@ -421,7 +516,7 @@
   border: 1px solid #ccc;
 }
 .main_food .main_food_bottom .main_day_r_span {
-  margin: 60px 20px;
+  margin: 60px 5px;
 }
 .main_food .main_food_bottom .main_day_r_ul {
   width: 192px;
@@ -433,11 +528,24 @@
   height: 116px;
   border-top: 1px solid #ccc;
 }
+.main_food .main_food_bottom .seabuy {
+  width: 70px;
+  height: 70px;
+}
+.main_food .main_food_bottom .seabuy_p_dot {
+  width: 120px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 54px;
+}
+.main_food .main_food_bottom .seabuy_color .seabuy_span_color {
+  color: red;
+}
 
 .main_digital {
   width: 1180px;
   height: 710px;
-  border: 1px solid #ccc;
   margin-bottom: 21px;
   display: flex;
   justify-content: space-between;
@@ -447,7 +555,6 @@
 .main_digital .main_digital_top_nav {
   width: 1180px;
   height: 60px;
-  border: 1px solid #ccc;
   float: left;
   display: flex;
   justify-content: space-between;
@@ -483,19 +590,34 @@
   border: 1px solid #ccc;
   float: left;
   list-style: none;
-  width: 235px;
+  width: 238px;
   height: 335px;
 }
 .main_digital .main_digital_bottom .main_digital_left .hebin1 {
   width: 470px;
 }
 .main_digital .main_digital_bottom .main_digital_left .hebin1 .imgs {
-  width: 469px;
+  width: 465px;
   height: 335px;
 }
 .main_digital .main_digital_bottom .main_digital_left .hebin2 {
   width: 0;
   border: 1px none #fff;
+}
+.main_digital .main_digital_bottom .main_digital_left .li_imgs .imgs {
+  width: 238px;
+  height: 195px;
+  margin-left: 20px;
+}
+.main_digital .main_digital_bottom .main_digital_left .li_imgs .title {
+  text-align: center;
+  line-height: 54px;
+}
+.main_digital .main_digital_bottom .main_digital_left .li_imgs .price {
+  text-align: center;
+  line-height: 54px;
+  color: red;
+  margin-left: 80px;
 }
 .main_digital .main_digital_bottom .main_digital_right {
   width: 242px;
@@ -503,17 +625,35 @@
   border: 1px solid #ccc;
 }
 .main_digital .main_digital_bottom .main_day_r_span {
-  margin: 60px 20px;
+  margin: 60px 5px;
 }
 .main_digital .main_digital_bottom .main_day_r_ul {
   width: 192px;
   height: 584px;
   margin: 50px 20px;
 }
-.main_digital .main_digital_bottom li {
+.main_digital .main_digital_bottom .main_day_r_ul li {
   list-style: none;
   height: 116px;
   border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.main_digital .main_digital_bottom .main_day_r_ul li .seabuy {
+  width: 70px;
+  height: 70px;
+}
+.main_digital .main_digital_bottom .main_day_r_ul li .seabuy_p_dot {
+  width: 120px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 54px;
+}
+.main_digital .main_digital_bottom .main_day_r_ul li .seabuy_color .seabuy_span_color {
+  color: red;
 }
 
 .bottom {
