@@ -1,0 +1,64 @@
+@charset "utf-8";
+$display:flex; //弹性盒
+$flexdirection:row;
+$justify: space-between;
+$align:flex-start;
+$backgroundurl:url(https://img0.fengqucdn.com/cmsres/20170329/030eede1-1185-4a2d-a2b6-c9c5a43316df.svg); //logo背景图片
+$background_width:237px; //背景图片的宽
+$background_height:95px; //背景图片的高
+$top_search_right2_width:183px; //搜索框右边的购物车宽
+$top_search_right2_height:24px; //搜索框右边的购物车高
+$search_margin:0; //搜索框左边的margin值
+//边框变量
+@mixin borderstyle($style:solid, $size:1px, $color:#ccc) {
+    border: $size $style $color;
+}
+
+//搜索部分的宽度
+@mixin search_w($search_w:1180px) {
+    width: $search_w;
+}
+
+//头部搜索部分
+.top_search {
+    @include search_w;
+    // @include borderstyle;
+    //弹性盒
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+    // margin-left: 200px;
+    // @include flex_direction_lr;
+    //搜索左边部分的margin值
+    .top_search_left {
+        // margin-left: $search_margin;
+        //logo图的宽高
+        img {
+            margin-left: 20px;
+            width: $background_width;
+            height: $background_height;
+        }
+    }
+    //搜索右边部分
+    .top_search_right {
+        //弹性盒
+        display: $display;
+        justify-content: $justify;
+        align-items: $align;
+        // @include flex_direction_lr;
+        // 搜索部分右边搜索框的第一块
+        // .top_search_right1 {
+        //     // margin-top: 48px;
+        // }
+        // 搜索部分右边搜索框的第一块
+        .top_search_right2 {
+            //右边的第二部分购物车的一块
+            // margin-top: 43px;
+            .cart {
+                width: $top_search_right2_width;
+                height: $top_search_right2_height;
+                @include borderstyle;
+            }
+        }
+    }
+}

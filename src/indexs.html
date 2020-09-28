@@ -20,7 +20,6 @@
 
 <body>
     <!-- 头部介绍登录，注册部分 -->
-
     <div class="header">
         <!-- 头部中间 -->
         <div class="headermid">
@@ -37,10 +36,22 @@
                 </li>
             </ul>
             <!-- 头部中间的右边 -->
-            <ul class="headermidright">
+            <ul class="headermidleft">
                 <li>
-                    <a href="">下载丰趣海淘APP</a>
+                    <a href="" class="app">
+                        下载丰趣海淘APP
+                    </a>
+                    <div class="erwei">
+                        <div class="erwei_top">
+                            <img src="" alt="">
+                        </div>
+                        <div class="erwei_down">
+                            <img src="//img0.fengqucdn.com/cmsres/20151218/e915eb46-09e1-4988-a3d8-39c85ac47f09.png" alt="" style="width: 100px;height: 100px;margin-left: 70px;margin-top: 20px;">
+                            <p style="margin-left: 80px;">扫一扫下载</p>
+                        </div>
+                    </div>
                 </li>
+
                 <li>
                     <a href="">我的订单</a>
                 </li>
@@ -56,8 +67,8 @@
             </ul>
         </div>
     </div>
-    <div class="middle">
-        <!-- 头部搜索部分 -->
+    <!-- 头顶部的搜索部分 -->
+    <div class="top_search">
         <div class="top_search ">
             <!-- 搜索部分的左边 -->
             <div class="top_search_left">
@@ -75,11 +86,13 @@
                 </section>
             </div>
         </div>
-        <!-- 头部的导航栏 -->
+    </div>
+    <div class="middle">
+        <!-- 导航栏部分 -->
         <div class="top_nav ">
             <ul class="top_nav_left">
                 <li>
-                    <a href="">首页</a>
+                    <a href="" class="active">首页</a>
                 </li>
                 <li>
                     <a href="">母婴专区</a>
@@ -112,7 +125,34 @@
                 </li>
             </ul>
         </div>
-        <!-- <div class="top_navs ">我是滚轴变换的导航栏</div> -->
+        <!-- 我是滚轴变换的导航栏 -->
+        <div class="animate_nav ">
+            <ul class="top_nav_left" style="margin-left: 568px;margin-top: 20px;">
+                <img src="" alt="">
+                <li>
+                    <a href="" class="active">首页</a>
+                </li>
+                <li>
+                    <a href="">母婴专区</a>
+                </li>
+                <li>
+                    <a href="">美妆个护</a>
+                </li>
+                <li>
+                    <a href="">健康生活</a>
+                </li>
+                <li>
+                    <a href="">数码电器</a>
+                </li>
+                <li>
+                    <a href="">服饰箱包</a>
+                </li>
+                <li>
+                    <a href="">家居日用</a>
+                </li>
+            </ul>
+            <!-- <div>购物车</div> -->
+        </div>
         <!-- 页面的主内容 -->
         <div class="main">
             <!-- 主内容第一块 -->
@@ -120,7 +160,7 @@
                 <div class="main_day_top_nav">
                     <!-- 第二块的导航栏部分 -->
                     <section class="main_top_nav_l">
-                        <i></i>
+                        <span style="width: 15px;height: 15px;color:red;">1</span>
                         <span>防晒修护</span>
                     </section>
                     <section class="main_top_nav_r">
@@ -152,8 +192,8 @@
 
                     </ul>
                     <!-- 主内容底部的右边的内容 -->
-                    <section class="main_day_right">
-                        <ul class="main_day_r_ul">
+                    <section class="main_digital_right">
+                        <ul class="main_day_r_ul" style="width: 192px;">
                             <span class="main_day_r_span">热销排行榜</span>
                             <li>
                                 <a href="#">
@@ -178,7 +218,7 @@
                 <div class="main_face_top_nav">
                     <!-- 第二块的导航栏部分 -->
                     <section class="main_top_nav_l">
-                        <i></i>
+                        <span style="width: 15px;height: 15px;color:red;">2</span>
                         <span>美容护肤</span>
                     </section>
                     <section class="main_top_nav_r">
@@ -200,20 +240,24 @@
                     </section>
                 </div>
                 <!-- 主内容底部 -->
-                <div class="main_face_bottom">
+                <div class="main_face_bottom" style="list-style: none;">
                     <!-- 主内容底部的左边的内容 -->
-                    <li class="hebin1">
+                    <!-- 需要渲染的数据 -->
+                    <!-- 主内容底部的左边的内容 -->
+
+                    <!-- 需要渲染的内容块 -->
+                    <!-- 主内容底部的左边的内容 -->
+                    <li class="img_guding">
                         <a href="#">
                             <img src="https://img0.fengqucdn.com/cmsres/20170531/aa804e09-2ec4-4b46-9be0-ab537ba53074.jpeg" alt="" class="imgs">
                         </a>
-
                     </li>
-                    <ul class="main_face_left">
-
+                    <!-- 需要渲染的内容块 -->
+                    <ul class="main_day_left ">
 
                     </ul>
                     <!-- 主内容底部的右边的内容 -->
-                    <section class="main_face_right">
+                    <section class="main_digital_right">
                         <ul class="main_day_r_ul">
                             <span class="main_day_r_span">热销排行榜</span>
                             <li>
@@ -239,7 +283,7 @@
                 <div class="main_baby_top_nav">
                     <!-- 第三块的导航栏部分 -->
                     <section class="main_top_nav_l">
-                        <i></i>
+                        <span style="width: 15px;height: 15px;color:red;">3</span>
                         <span>母婴专区</span>
                     </section>
                     <section class="main_top_nav_r">
@@ -258,15 +302,19 @@
                 </div>
                 <div class="main_baby_bottom">
                     <!-- 主内容底部的左边的内容 -->
-                    <ul class="main_baby_left">
-                        <li class="hebin1">
-                            <a href="#">
-                                <img src="https://img0.fengqucdn.com/cmsres/20160718/c3d490c1-f465-41fa-9322-585e2a724f72.jpeg" alt="" class="imgs">
-                            </a>
-                        </li>
+
+                    <li class="img_guding">
+                        <a href="#">
+                            <img src="https://img0.fengqucdn.com/cmsres/20160718/c3d490c1-f465-41fa-9322-585e2a724f72.jpeg" alt="" class="imgs">
+                        </a>
+                    </li>
+                    <!-- 需要渲染的内容块 -->
+                    <ul class="main_day_left ">
+
                     </ul>
                     <!-- 主内容底部的右边的内容 -->
-                    <section class="main_baby_right">
+                    <section class="main_digital_right">
+
                         <ul class="main_day_r_ul">
                             <span class="main_day_r_span">热销排行榜</span>
                             <li>
@@ -292,7 +340,7 @@
                 <div class="main_food_top_nav">
                     <!-- 第四块的导航栏部分 -->
                     <section class="main_top_nav_l">
-                        <i></i>
+                        <span style="width: 15px;height: 15px;color:red;">4</span>
                         <span>食品保健</span>
                     </section>
                     <section class="main_top_nav_r">
@@ -309,17 +357,20 @@
                 </div>
                 <div class="main_food_bottom">
                     <!-- 主内容底部的左边的内容 -->
-                    <ul class="main_food_left">
-                        <li class="hebin1">
-                            <a href="#">
-                                <img src="https://img0.fengqucdn.com/cmsres/20181203/214c25d8-c867-46fe-a8c5-afc964bec6a4.jpeg" alt="" class="imgs">
-                            </a>
 
-                        </li>
+                    <li class="img_guding">
+                        <a href="#">
+                            <img src="https://img0.fengqucdn.com/cmsres/20181203/214c25d8-c867-46fe-a8c5-afc964bec6a4.jpeg" alt="" class="imgs">
+                        </a>
+                    </li>
+                    <!-- 需要渲染的内容块 -->
+                    <ul class="main_day_left ">
+
                     </ul>
                     <!-- 主内容底部的右边的内容 -->
-                    <section class="main_food_right">
+                    <section class="main_digital_right">
                         <ul class="main_day_r_ul">
+                            <span class="main_day_r_span">热销排行榜</span>
                             <li>
                                 <a href="#">
                                     <img src="https://img0.fengqucdn.com/sf/skuInfos/1114606/3f057ba30957042ec3546f453b2e7376.jpeg@640h_640w_1c_1e" alt="" class="seabuy">
@@ -343,7 +394,7 @@
                 <div class="main_digital_top_nav">
                     <!-- 第五块的导航栏部分 -->
                     <section class="main_top_nav_l">
-                        <i></i>
+                        <span style="width: 15px;height: 15px;color:red;">5</span>
                         <span>数码家电</span>
                     </section>
                     <section class="main_top_nav_r">
@@ -360,56 +411,14 @@
                 </div>
                 <div class="main_digital_bottom">
                     <!-- 主内容底部的左边的内容 -->
-                    <ul class="main_digital_left">
-                        <li class="hebin1">
-                            <a href="#">
-                                <img src="https://img0.fengqucdn.com/cmsres/20170628/f1b6c792-d471-4ef4-8913-e4b2b905c024.png" alt="" class="imgs">
-                            </a>
+                    <li class="img_guding">
+                        <a href="#">
+                            <img src="https://img0.fengqucdn.com/cmsres/20170628/f1b6c792-d471-4ef4-8913-e4b2b905c024.png" alt="" class="imgs">
+                        </a>
+                    </li>
+                    <!-- 需要渲染的内容块 -->
+                    <ul class="main_day_left ">
 
-                        </li>
-                        <li class="hebin2"></li>
-                        <li class="li_imgs">
-                            <a href="">
-                                <img src="https://img0.fengqucdn.com/sf/skuInfos/1023199/d5408d02cbc1bc52ba2e2d00c30443f2.jpg@640h_640w_1c_1e" alt="" class="imgs">
-                            </a>
-                            <p class="title">提亮肤色</p>
-                            <span class="price">￥1098</span>
-                        </li>
-                        <li class="li_imgs">
-                            <a href="">
-                                <img src="https://img0.fengqucdn.com/sf/skuInfos/1023199/d5408d02cbc1bc52ba2e2d00c30443f2.jpg@640h_640w_1c_1e" alt="" class="imgs">
-                            </a>
-                            <p class="title">提亮肤色</p>
-                            <span class="price">￥1098</span>
-                        </li>
-                        <li class="li_imgs">
-                            <a href="">
-                                <img src="https://img0.fengqucdn.com/sf/skuInfos/1023199/d5408d02cbc1bc52ba2e2d00c30443f2.jpg@640h_640w_1c_1e" alt="" class="imgs">
-                            </a>
-                            <p class="title">提亮肤色</p>
-                            <span class="price">￥1098</span>
-                        </li>
-                        <li class="li_imgs">
-                            <a href="">
-                                <img src="https://img0.fengqucdn.com/sf/skuInfos/1023199/d5408d02cbc1bc52ba2e2d00c30443f2.jpg@640h_640w_1c_1e" alt="" class="imgs">
-                            </a>
-                            <p class="title">提亮肤色</p>
-                            <span class="price">￥1098</span>
-                        </li>
-                        <li class="li_imgs">
-                            <a href="">
-                                <img src="https://img0.fengqucdn.com/sf/skuInfos/1023199/d5408d02cbc1bc52ba2e2d00c30443f2.jpg@640h_640w_1c_1e" alt="" class="imgs">
-                            </a>
-                            <p class="title">提亮肤色</p>
-                            <span class="price">￥1098</span>
-                        </li>
-                        <li class="li_imgs">
-                            <a href="">
-                                <img src="https://img0.fengqucdn.com/sf/skuInfos/1023199/d5408d02cbc1bc52ba2e2d00c30443f2.jpg@640h_640w_1c_1e" alt="" class="imgs">
-                            </a>
-                            <p class="title">提亮肤色</p>
-                            <span class="price">￥1098</span>
-                        </li>
                     </ul>
                     <!-- 主内容底部的右边的内容 -->
                     <section class="main_digital_right">

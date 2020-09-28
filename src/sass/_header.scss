@@ -1,35 +1,38 @@
 @charset "utf-8";
 $headercolor:#3E3A39; //顶部介绍背景颜色
-$headerheight:30px; //顶部
 $headermidwidth:1180px;
-$headermargin:0px auto;
-$display:flex;
+$headermargin:0px auto; //定中间版心居中的margin值
+$display:flex; //弹性盒
 $flexdirection:row;
 $justify: space-between;
 $align:flex-start;
-$backgroundurl:url(https://img0.fengqucdn.com/cmsres/20170329/030eede1-1185-4a2d-a2b6-c9c5a43316df.svg);
+$backgroundurl:url(https://img0.fengqucdn.com/cmsres/20170329/030eede1-1185-4a2d-a2b6-c9c5a43316df.svg); //logo背景图片
 // 底部宽度变量
 @mixin bottomwidth($bottomwidth:100%) {
     width: $bottomwidth;
 }
 
-//
+//去黑点
 @mixin list($list:none) {
     list-style: $list;
 }
 
+//去掉下划线
 @mixin underline($underline:none) {
     text-decoration: none;
 }
 
+//左浮动
 @mixin float($float:left) {
     float: $float;
 }
 
+//字体颜色
 @mixin color($color:#ccc) {
     color: $color;
 }
 
+//
 @mixin marginleft($marginleft:20px) {
     margin-left: $marginleft;
 }
@@ -38,10 +41,7 @@ $backgroundurl:url(https://img0.fengqucdn.com/cmsres/20170329/030eede1-1185-4a2d
     margin-right: $marginright;
 }
 
-@mixin lineheight($lineheight:30px) {
-    line-height: $lineheight;
-}
-
+//字体大小
 @mixin font($font: 12px/1.14 "微软雅黑") {
     font: $font;
 }
@@ -49,27 +49,29 @@ $backgroundurl:url(https://img0.fengqucdn.com/cmsres/20170329/030eede1-1185-4a2d
 //头部
 .header {
     @include bottomwidth;
-    height: $headerheight;
-    margin: $headermargin;
-    background: $headercolor;
+    height: 30px;
+    margin: $headermargin; //中间版心居中的margin值
+    background: $headercolor; //头部的背景颜色
 }
 
 //头部中间的版心
 .headermid {
     width: $headermidwidth;
-    margin: $headermargin;
+    margin: $headermargin; //中间版心居中的margin值
+    //弹性盒
     display: $display;
     flex-direction: row;
     justify-content: $justify;
     align-items: $align;
 }
 
-//版心的左边内容
+//版心的左边和右边的内容
 .headermidleft {
-    @include list;
+    margin-top: 7px;
+    position: relative;
     li {
+        @include list;
         @include float;
-        @include lineheight;
         a {
             @include font;
             @include underline;
@@ -77,19 +79,28 @@ $backgroundurl:url(https://img0.fengqucdn.com/cmsres/20170329/030eede1-1185-4a2d
             @include marginleft;
         }
     }
-}
-
-//版心的右边内容
-.headermidright {
-    @include list;
-    li {
-        @include float;
-        @include lineheight;
-        a {
-            @include font;
-            @include underline;
-            @include color;
-            @include marginright;
+    .erwei {
+        width: 250px;
+        height: 250px;
+        border: 1px solid black;
+        position: absolute;
+        top: 22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 3px;
+        box-shadow: 1px 1px;
+        display: none;
+        .erwei_top {
+            width: 200px;
+            height: 70px;
+            margin-left: 20px;
+            border-bottom: 1px solid black;
+        }
+        .erwei_down {
+            width: 250px;
+            height: 120px;
         }
     }
 }

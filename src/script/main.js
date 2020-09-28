@@ -30,6 +30,23 @@ require(['jquery', 'jcookie', 'jlazyload'], function() {
         //调用了index_module  lsit_module  detail_module
         //page:index_module模块的返回值。
         //page.init():调用index_moudule模块的init()
+        //第一块获取数据的效果
         page.init();
+        //第一块鼠标移入左边li的效果
+        page.list_left();
+        //第一块鼠标移入左边li的效果
+        page.list_right();
+        //鼠标移入在头部的效果
+        page.main_nav();
+        //主内容导航栏的效果
+        page.header_nav();
+        //主内容导航栏右边移入的效果
+        page.top_nav_right();
+        //tab切换
+        page.tab();
+        //鼠标移入显示二维码
+        page.app();
+        //顶部悬浮
+        page.float_nav();
     });
 })
