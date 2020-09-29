@@ -13,7 +13,8 @@ a {
 }
 
 .m-style {
-    float: right;
+    // float: right;
+    margin-left: 680px;
     text-align: center;
 }
 
@@ -36,6 +37,7 @@ a {
     line-height: 38px;
     color: #000;
     font-size: 14px;
+    background: lightskyblue;
 }
 
 .m-style .active {
@@ -45,7 +47,7 @@ a {
     height: 38px;
     line-height: 38px;
     // background: #e91e63;
-    color: #fff;
+    color: black;
     font-size: 14px;
     // border: 1px solid #e91e63;
 }
@@ -56,7 +58,7 @@ a {
     width: 38px;
     height: 38px;
     line-height: 38px;
-    background: #fff;
+    background: lightskyblue;
     border: 1px solid #ebebeb;
     color: #000;
     font-size: 14px;
@@ -65,7 +67,12 @@ a {
 
 .m-style a:hover {
     color: #000;
-    background: lightskyblue;
+    background: white;
+}
+
+.m-style span:hover {
+    color: #000;
+    background: white;
 }
 
 .m-style .next,

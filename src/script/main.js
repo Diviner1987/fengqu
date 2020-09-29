@@ -17,15 +17,15 @@ require.config({
     }
 });
 
-// require(['index_module']);//加载模块的方式 
-require(['jquery'], function() {
-    let page = $('#currentpage').attr('page-origin'); //通过id名或者内部的自定义属性page-origin的值。
-    if (page) {
-        require([page], function(page) {
-            page.init();
-        });
-    }
-});
+// require(['index_module']); //加载模块的方式 
+// require(['jquery', 'jcookie', 'jlazyload'], function() {
+//     let page = $('#currentpage').attr('data-page'); //通过id名或者内部的自定义属性page-origin的值。
+//     if (page) {
+//         require([page], function(page) {
+//             page.init();
+//         });
+//     }
+// });
 
 
 
@@ -34,15 +34,16 @@ require(['jquery'], function() {
 require(['jquery', 'jcookie', 'jlazyload'], function() {
     //通过不同的页面调用不同的模块
     //1.获取script标签里面的自定义属性data-page
-    let pagemod = $('#currentpage').attr('data-page'); //获取自定义属性的值 index_module lsit_module  detail_module
-    console.log(pagemod);
+    let page = $('#currentpage').attr('data-page'); //获取自定义属性的值 index_module lsit_module  detail_module
+    if (page) {
+        //2.加载script标签里面约定的模块名。
+        require([page], function(page) {
+            //调用了index_module  lsit_module  detail_module
+            //page:index_module模块的返回值。
+            //page.init():调用index_moudule模块的init()
+            //第一块获取数据的效果
+            page.init();
+        });
+    }
 
-    //2.加载script标签里面约定的模块名。
-    require([pagemod], function(page) {
-        //调用了index_module  lsit_module  detail_module
-        //page:index_module模块的返回值。
-        //page.init():调用index_moudule模块的init()
-        //第一块获取数据的效果
-        page.init();
-    });
 })

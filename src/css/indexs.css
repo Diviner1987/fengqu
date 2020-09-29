@@ -95,7 +95,7 @@
 }
 .animate_nav li a {
   text-decoration: none;
-  color: #333;
+  color: red;
 }
 .animate_nav .active {
   border-bottom: 3px solid red;
