@@ -1,0 +1,623 @@
+@charset "UTF-8";
+.header {
+  width: 100%;
+  height: 30px;
+  margin: 0px auto;
+  background: #3E3A39; }
+
+.headermid {
+  width: 1180px;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start; }
+
+.headermidleft {
+  margin-top: 7px;
+  position: relative; }
+  .headermidleft li {
+    list-style: none;
+    float: left; }
+    .headermidleft li a {
+      font: 12px/1.14 "微软雅黑";
+      text-decoration: none;
+      color: #ccc;
+      margin-left: 20px; }
+  .headermidleft .erwei {
+    width: 250px;
+    height: 250px;
+    border: 1px solid black;
+    position: absolute;
+    top: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 3px;
+    box-shadow: 1px 1px;
+    display: none; }
+    .headermidleft .erwei .erwei_top {
+      width: 200px;
+      height: 70px;
+      margin-left: 20px;
+      border-bottom: 1px solid black; }
+    .headermidleft .erwei .erwei_down {
+      width: 250px;
+      height: 120px; }
+
+.middle {
+  width: 1180px;
+  margin: 0px auto; }
+
+.top_nav {
+  width: 1180px;
+  height: 54px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row; }
+
+.animate_nav {
+  width: 100%;
+  height: 54px;
+  background: white;
+  position: fixed;
+  top: -60px;
+  z-index: 1000;
+  border-bottom: 1px solid #aaa;
+  box-shadow: 1px; }
+  .animate_nav li {
+    float: left;
+    list-style: none;
+    padding-right: 50px;
+    padding-bottom: 20px; }
+    .animate_nav li a {
+      text-decoration: none;
+      color: #333; }
+  .animate_nav .active {
+    border-bottom: 3px solid red;
+    color: red; }
+
+.top_nav_left li {
+  float: left;
+  list-style: none;
+  padding-right: 50px;
+  padding-bottom: 8px; }
+  .top_nav_left li a {
+    text-decoration: none;
+    color: #333; }
+.top_nav_left .active {
+  border-bottom: 3px solid red;
+  color: red; }
+
+.top_nav_right li {
+  float: left;
+  list-style: none; }
+  .top_nav_right li a {
+    padding-left: 25px;
+    text-decoration: none;
+    color: #777; }
+
+.main {
+  width: 1180px; }
+
+.main_day {
+  width: 1180px;
+  height: 700px;
+  margin-bottom: 21px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column; }
+  .main_day .main_day_top_nav {
+    width: 1180px;
+    height: 60px;
+    float: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row; }
+    .main_day .main_day_top_nav .main_top_nav_l {
+      font-size: 19px; }
+    .main_day .main_day_top_nav .main_top_nav_r a {
+      float: left;
+      list-style: none;
+      text-decoration: none;
+      color: #666; }
+    .main_day .main_day_top_nav .main_top_nav_r span {
+      float: left;
+      padding: 0 10px;
+      color: #ccc; }
+  .main_day .main_day_bottom {
+    width: 1180px;
+    height: 983px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .main_day .main_day_bottom .img_guding {
+      position: absolute;
+      top: 0px;
+      list-style: none;
+      width: 472px;
+      height: 335px; }
+      .main_day .main_day_bottom .img_guding .imgs {
+        width: 472px;
+        height: 335px; }
+    .main_day .main_day_bottom .main_day_left li {
+      border: 1px solid #ccc;
+      float: left;
+      list-style: none;
+      width: 235px;
+      height: 335px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 54px; }
+    .main_day .main_day_bottom .main_day_left li:first-child {
+      margin-left: 472px; }
+    .main_day .main_day_bottom .main_day_left .li_imgs .imgs {
+      height: 195px;
+      margin-left: 20px; }
+    .main_day .main_day_bottom .main_day_left .li_imgs .title {
+      text-align: center;
+      line-height: 54px;
+      text-decoration: none;
+      color: #333; }
+    .main_day .main_day_bottom .main_day_left .li_imgs .price {
+      color: red;
+      margin-left: 80px; }
+    .main_day .main_day_bottom .main_digital_right {
+      width: 245px;
+      height: 670px;
+      border: 1px solid #ccc; }
+      .main_day .main_day_bottom .main_digital_right .main_day_r_span {
+        margin: 60px 5px; }
+      .main_day .main_day_bottom .main_digital_right .main_day_r_ul {
+        height: 584px;
+        margin: 50px 22px; }
+        .main_day .main_day_bottom .main_digital_right .main_day_r_ul li {
+          list-style: none;
+          height: 116px;
+          border-top: 1px solid #ccc;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-direction: row; }
+          .main_day .main_day_bottom .main_digital_right .main_day_r_ul li .redtitle {
+            width: 44px;
+            height: 38px;
+            background: url(https://img0.fengqucdn.com/cmsres/20150924/74cbbfb5-7c18-4933-a31a-5209a16deb13.png) no-repeat;
+            top: 40px; }
+      .main_day .main_day_bottom .main_digital_right .main_day_r_ul .seabuy {
+        width: 70px;
+        height: 70px; }
+      .main_day .main_day_bottom .main_digital_right .seabuy_p_dot {
+        width: 120px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 54px;
+        cursor: pointer; }
+      .main_day .main_day_bottom .main_digital_right .seabuy_color .seabuy_span_color {
+        color: red; }
+
+.main_face {
+  width: 1180px;
+  height: 700px;
+  margin-bottom: 21px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column; }
+  .main_face .main_face_top_nav {
+    width: 1180px;
+    height: 60px;
+    float: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row; }
+    .main_face .main_face_top_nav .main_top_nav_l {
+      font-size: 19px; }
+    .main_face .main_face_top_nav .main_top_nav_r a {
+      float: left;
+      list-style: none;
+      color: #666; }
+    .main_face .main_face_top_nav .main_top_nav_r span {
+      float: left;
+      padding: 0 10px;
+      color: #ccc; }
+  .main_face .main_face_bottom {
+    width: 1180px;
+    height: 983px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; }
+    .main_face .main_face_bottom .img_guding {
+      position: absolute;
+      top: 0;
+      list-style: none;
+      width: 472px;
+      height: 335px; }
+      .main_face .main_face_bottom .img_guding .imgs {
+        width: 472px;
+        height: 335px; }
+    .main_face .main_face_bottom .main_day_left li {
+      border: 1px solid #ccc;
+      float: left;
+      list-style: none;
+      width: 236px;
+      height: 335px; }
+    .main_face .main_face_bottom .main_day_left li:first-child {
+      margin-left: 472px; }
+    .main_face .main_face_bottom .main_day_left .imgs {
+      width: 238px;
+      height: 195px; }
+    .main_face .main_face_bottom .main_day_left .title {
+      text-align: center;
+      line-height: 54px;
+      text-decoration: none; }
+    .main_face .main_face_bottom .main_day_left .price {
+      text-align: center;
+      line-height: 54px;
+      color: red;
+      margin-left: 80px; }
+    .main_face .main_face_bottom .main_digital_right {
+      width: 243px;
+      height: 670px;
+      border: 1px solid #ccc; }
+      .main_face .main_face_bottom .main_digital_right .main_day_r_span {
+        margin: 60px 5px; }
+      .main_face .main_face_bottom .main_digital_right .main_day_r_ul {
+        height: 584px;
+        margin: 50px 22px; }
+        .main_face .main_face_bottom .main_digital_right .main_day_r_ul li {
+          list-style: none;
+          height: 116px;
+          border-top: 1px solid #ccc;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-direction: row; }
+      .main_face .main_face_bottom .main_digital_right .main_day_r_ul .seabuy {
+        width: 70px;
+        height: 70px; }
+      .main_face .main_face_bottom .main_digital_right .seabuy_p_dot {
+        width: 120px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 54px;
+        cursor: pointer; }
+      .main_face .main_face_bottom .main_digital_right .seabuy_color .seabuy_span_color {
+        color: red; }
+
+.main_baby {
+  width: 1180px;
+  height: 700px;
+  margin-bottom: 21px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column; }
+  .main_baby .main_baby_top_nav {
+    width: 1180px;
+    height: 60px;
+    float: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row; }
+    .main_baby .main_baby_top_nav .main_top_nav_l {
+      font-size: 19px; }
+    .main_baby .main_baby_top_nav .main_top_nav_r a {
+      float: left;
+      list-style: none;
+      text-decoration: none;
+      color: #666; }
+    .main_baby .main_baby_top_nav .main_top_nav_r span {
+      float: left;
+      padding: 0 10px;
+      color: #ccc; }
+  .main_baby .main_baby_bottom {
+    width: 1180px;
+    height: 983px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; }
+    .main_baby .main_baby_bottom .img_guding {
+      position: absolute;
+      top: 0;
+      list-style: none;
+      width: 472px;
+      height: 335px; }
+      .main_baby .main_baby_bottom .img_guding .imgs {
+        width: 472px;
+        height: 335px; }
+    .main_baby .main_baby_bottom .main_day_left li {
+      border: 1px solid #ccc;
+      float: left;
+      list-style: none;
+      width: 236px;
+      height: 335px; }
+    .main_baby .main_baby_bottom .main_day_left li:first-child {
+      margin-left: 472px; }
+    .main_baby .main_baby_bottom .main_day_left .li_imgs .imgs {
+      width: 238px;
+      height: 195px; }
+    .main_baby .main_baby_bottom .main_day_left .li_imgs .title {
+      text-align: center;
+      line-height: 54px; }
+    .main_baby .main_baby_bottom .main_day_left .li_imgs .price {
+      text-align: center;
+      line-height: 54px;
+      color: red;
+      margin-left: 80px; }
+    .main_baby .main_baby_bottom .main_digital_right {
+      width: 243px;
+      height: 670px;
+      border: 1px solid #ccc; }
+      .main_baby .main_baby_bottom .main_digital_right .main_day_r_span {
+        margin: 60px 5px; }
+      .main_baby .main_baby_bottom .main_digital_right .main_day_r_ul {
+        height: 584px;
+        margin: 50px 22px; }
+        .main_baby .main_baby_bottom .main_digital_right .main_day_r_ul li {
+          list-style: none;
+          height: 116px;
+          border-top: 1px solid #ccc;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-direction: row; }
+      .main_baby .main_baby_bottom .main_digital_right .main_day_r_ul .seabuy {
+        width: 70px;
+        height: 70px; }
+      .main_baby .main_baby_bottom .main_digital_right .seabuy_p_dot {
+        width: 120px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 54px;
+        cursor: pointer; }
+      .main_baby .main_baby_bottom .main_digital_right .seabuy_color .seabuy_span_color {
+        color: red; }
+
+.main_food {
+  width: 1180px;
+  height: 700px;
+  margin-bottom: 21px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column; }
+  .main_food .main_food_top_nav {
+    width: 1180px;
+    height: 60px;
+    float: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row; }
+    .main_food .main_food_top_nav .main_top_nav_l {
+      font-size: 19px; }
+    .main_food .main_food_top_nav .main_top_nav_r a {
+      float: left;
+      list-style: none;
+      text-decoration: none;
+      color: #666; }
+    .main_food .main_food_top_nav .main_top_nav_r span {
+      float: left;
+      padding: 0 10px;
+      color: #ccc; }
+  .main_food .main_food_bottom {
+    width: 1180px;
+    height: 983px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; }
+    .main_food .main_food_bottom .img_guding {
+      position: absolute;
+      top: 0;
+      list-style: none;
+      width: 472px;
+      height: 335px; }
+      .main_food .main_food_bottom .img_guding .imgs {
+        width: 472px;
+        height: 335px; }
+    .main_food .main_food_bottom .main_day_left li {
+      border: 1px solid #ccc;
+      float: left;
+      list-style: none;
+      width: 236px;
+      height: 335px; }
+    .main_food .main_food_bottom .main_day_left li:first-child {
+      margin-left: 472px; }
+    .main_food .main_food_bottom .main_day_left .li_imgs .imgs {
+      width: 238px;
+      height: 195px; }
+    .main_food .main_food_bottom .main_day_left .li_imgs .title {
+      text-align: center;
+      line-height: 54px; }
+    .main_food .main_food_bottom .main_day_left .li_imgs .price {
+      text-align: center;
+      line-height: 54px;
+      color: red;
+      margin-left: 80px; }
+    .main_food .main_food_bottom .main_digital_right {
+      width: 243px;
+      height: 670px;
+      border: 1px solid #ccc; }
+      .main_food .main_food_bottom .main_digital_right .main_day_r_span {
+        margin: 60px 5px; }
+      .main_food .main_food_bottom .main_digital_right .main_day_r_ul {
+        height: 584px;
+        margin: 50px 22px; }
+        .main_food .main_food_bottom .main_digital_right .main_day_r_ul li {
+          list-style: none;
+          height: 116px;
+          border-top: 1px solid #ccc;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-direction: row; }
+      .main_food .main_food_bottom .main_digital_right .main_day_r_ul .seabuy {
+        width: 70px;
+        height: 70px; }
+      .main_food .main_food_bottom .main_digital_right .seabuy_p_dot {
+        width: 120px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 54px;
+        cursor: pointer; }
+      .main_food .main_food_bottom .main_digital_right .seabuy_color .seabuy_span_color {
+        color: red; }
+
+.main_digital {
+  width: 1180px;
+  height: 700px;
+  margin-bottom: 21px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column; }
+  .main_digital .main_digital_top_nav {
+    width: 1180px;
+    height: 60px;
+    float: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row; }
+    .main_digital .main_digital_top_nav .main_top_nav_l {
+      font-size: 19px; }
+    .main_digital .main_digital_top_nav .main_top_nav_r a {
+      float: left;
+      list-style: none;
+      text-decoration: none;
+      color: #666; }
+    .main_digital .main_digital_top_nav .main_top_nav_r span {
+      float: left;
+      padding: 0 10px;
+      color: #ccc; }
+  .main_digital .main_digital_bottom {
+    width: 1180px;
+    height: 983px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; }
+    .main_digital .main_digital_bottom .img_guding {
+      position: absolute;
+      top: 0;
+      list-style: none;
+      width: 472px;
+      height: 335px; }
+      .main_digital .main_digital_bottom .img_guding .imgs {
+        width: 472px;
+        height: 335px; }
+    .main_digital .main_digital_bottom .main_day_left li {
+      border: 1px solid #ccc;
+      float: left;
+      list-style: none;
+      width: 236px;
+      height: 335px; }
+    .main_digital .main_digital_bottom .main_day_left li:first-child {
+      margin-left: 472px; }
+    .main_digital .main_digital_bottom .main_day_left .li_imgs .imgs {
+      width: 238px;
+      height: 195px; }
+    .main_digital .main_digital_bottom .main_day_left .li_imgs .title {
+      text-align: center;
+      line-height: 54px; }
+    .main_digital .main_digital_bottom .main_day_left .li_imgs .price {
+      text-align: center;
+      line-height: 54px;
+      color: red;
+      margin-left: 80px; }
+    .main_digital .main_digital_bottom .main_digital_right {
+      width: 243px;
+      height: 670px;
+      border: 1px solid #ccc; }
+      .main_digital .main_digital_bottom .main_digital_right .main_day_r_span {
+        margin: 60px 5px; }
+      .main_digital .main_digital_bottom .main_digital_right .main_day_r_ul {
+        height: 584px;
+        margin: 50px 22px; }
+        .main_digital .main_digital_bottom .main_digital_right .main_day_r_ul li {
+          list-style: none;
+          height: 116px;
+          border-top: 1px solid #ccc;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-direction: row; }
+      .main_digital .main_digital_bottom .main_digital_right .main_day_r_ul .seabuy {
+        width: 70px;
+        height: 70px; }
+      .main_digital .main_digital_bottom .main_digital_right .seabuy_p_dot {
+        width: 120px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 54px;
+        cursor: pointer; }
+      .main_digital .main_digital_bottom .main_digital_right .seabuy_color .seabuy_span_color {
+        color: red; }
+
+.bottom {
+  width: 100%;
+  height: 350px;
+  border: 1px solid #ccc; }
+  .bottom .mask {
+    z-index: 5000;
+    width: 100%;
+    height: 100px;
+    background: violet;
+    position: fixed;
+    bottom: 0;
+    display: block;
+    position: relative; }
+    .bottom .mask .guanggao {
+      width: 960px;
+      height: 70px;
+      background: yellowgreen;
+      position: absolute;
+      top: 10px;
+      left: 50px; }
+
+.bottom_detail {
+  width: 100%;
+  height: 80px;
+  border: 1px solid #ccc;
+  background: #3E3A39; }
+  .bottom_detail ul {
+    width: 1180px;
+    height: 54px;
+    margin: 10px auto; }
+    .bottom_detail ul li {
+      list-style: none;
+      float: left;
+      color: #fff;
+      text-align: center;
+      line-height: 54px;
+      border-right: 1px solid #ccc;
+      padding-right: 25px; }
+      .bottom_detail ul li span {
+        margin-right: 25px;
+        margin-left: 45px; }
+    .bottom_detail ul .detail_li {
+      border-right: none; }
+
+.bottom_information {
+  width: 100%;
+  height: 270px;
+  border: 1px solid #ccc; }
+
+/*# sourceMappingURL=indexs.css.map */

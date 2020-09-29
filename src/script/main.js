@@ -18,6 +18,18 @@ require.config({
 });
 
 // require(['index_module']);//加载模块的方式 
+require(['jquery'], function() {
+    let page = $('#currentpage').attr('page-origin'); //通过id名或者内部的自定义属性page-origin的值。
+    if (page) {
+        require([page], function(page) {
+            page.init();
+        });
+    }
+});
+
+
+
+
 
 require(['jquery', 'jcookie', 'jlazyload'], function() {
     //通过不同的页面调用不同的模块
@@ -32,21 +44,5 @@ require(['jquery', 'jcookie', 'jlazyload'], function() {
         //page.init():调用index_moudule模块的init()
         //第一块获取数据的效果
         page.init();
-        //第一块鼠标移入左边li的效果
-        page.list_left();
-        //第一块鼠标移入左边li的效果
-        page.list_right();
-        //鼠标移入在头部的效果
-        page.main_nav();
-        //主内容导航栏的效果
-        page.header_nav();
-        //主内容导航栏右边移入的效果
-        page.top_nav_right();
-        //tab切换
-        page.tab();
-        //鼠标移入显示二维码
-        page.app();
-        //顶部悬浮
-        page.float_nav();
     });
 })

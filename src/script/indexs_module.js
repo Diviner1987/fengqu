@@ -18,29 +18,20 @@ define(['jlazyload', 'jquery'], function() {
                             $strhtml += `
                             <li >
                                     <a href="indexs.html?sid=${value.sid}">
-                                        <img  src="${value.url}" width="200" height="200" />
+                                        <img class="lazy" data-original="${value.url}" width="200" height="200" />
                                         <p>${value.title}</p>
                                         <span>￥${value.price}</span>
                                     </a>
                             </li>
                             `;
-                            //         <li >
-                            //         <a href="indexs.html?sid=${value.sid}">
-                            //             <img class="lazy" data-originnal="${value.url}" width="200" height="200" />
-                            //             <p>${value.title}</p>
-                            //             <span>￥${value.price}</span>
-                            //         </a>
-                            // </li>
-                            // `;
                         }
                     });
+                    // 将渲染的数据追加
                     $list_left.html($strhtml);
-                    //鼠标移入的样式
-
                     // 懒加载效果
-                    // $("img.lazy").lazyload({
-                    //     effect: "fadeIn" //图片显示方式
-                    // });
+                    $("img.lazy").lazyload({
+                        effect: "fadeIn" //图片显示方式
+                    });
                 });
         },
         //鼠标移入移出左边渲染li的效果
@@ -155,22 +146,25 @@ define(['jlazyload', 'jquery'], function() {
         float_nav: function() {
             //取到会发生事件的元素,对于发生这个事情是因为滚轴发生的触发来使元素发生运动,出现效果
             const $float_nav = $('.animate_nav');
+            const $float_mask = $('.mask');
             $(window).on('scroll', function() {
-                //取到滚动条的top值
-                let $top = $(window).scrollTop();
-                //当top值大于移出去的高度的时候就将要运动的元素显示效果出来
-                if ($top >= 400) {
-                    $float_nav.stop(true).animate({
-                        top: 0
-                    });
-                }
-                //当小于的时候就将元素运动隐藏,值是不要加单位的
-                else {
-                    $float_nav.stop(true).animate({
-                        top: -54
-                    });
-                }
-            })
+                    //取到滚动条的top值
+                    let $top = $(window).scrollTop();
+                    //当top值大于移出去的高度的时候就将要运动的元素显示效果出来
+                    if ($top >= 400) {
+                        $float_nav.stop(true).animate({
+                            top: 0
+                        });
+                    }
+                    //当小于的时候就将元素运动隐藏,值是不要加单位的
+                    else {
+                        $float_nav.stop(true).animate({
+                            top: -54
+                        });
+                    }
+                })
+                //底部遮罩层显示
+
         }
     }
 });

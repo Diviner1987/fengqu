@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>丰趣列表页面</title>
+    <link rel="stylesheet" href="./css/list.css">
+    <!-- <link rel="stylesheet" href="./css"> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            vertical-align: top;
+            list-style: none;
+        }
+    </style>
+    <script src="./script/require.js" data-main="./script/main.js" defer async="true" id="currentpage" data-page="list_module"></script>
+
+</head>
+
+<body>
+    <!-- 头部介绍登录，注册部分 -->
+    <div class="header">
+        <!-- 头部中间 -->
+        <div class="headermid">
+            <!-- 头部中间的左边 -->
+            <ul class="headermidleft">
+                <li>
+                    <a href="">海淘首页</a>
+                </li>
+                <li>
+                    <a href="">登录</a>
+                </li>
+                <li>
+                    <a href="">注册</a>
+                </li>
+            </ul>
+            <!-- 头部中间的右边 -->
+            <ul class="headermidleft">
+                <li>
+                    <a href="" class="app">
+                        下载丰趣海淘APP
+                    </a>
+                    <div class="erwei" style="background: whitesmoke;">
+                        <div class="erwei_top">
+                            <img src="" alt="">
+                        </div>
+                        <div class="erwei_down">
+                            <img src="https://img0.fengqucdn.com/cmsres/20151218/e915eb46-09e1-4988-a3d8-39c85ac47f09.png" alt="" style="width: 100px;height: 100px;margin-left: 70px;margin-top: 20px;">
+                            <p style="margin-left: 80px;">扫一扫下载</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="">我的订单</a>
+                </li>
+                <li>
+                    <a href="">个人中心</a>
+                </li>
+                <li>
+                    <a href="">联系客服</a>
+                </li>
+                <li>
+                    <a href="">关于我们</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 头顶部的搜索部分 -->
+    <div class="top_search">
+        <div class="top_search ">
+            <!-- 搜索部分的左边 -->
+            <div class="top_search_left" style="margin-left: 200px;">
+                <img src="https://img0.fengqucdn.com/cmsres/20170329/030eede1-1185-4a2d-a2b6-c9c5a43316df.svg" alt="">
+            </div>
+            <!-- 搜索部分的右边 -->
+            <div class="top_search_right" style="margin-top: 42px;">
+                <!-- 右边的第一部分搜索框-->
+                <section class="top_search_right1">
+                    <span><input type="text" class="input"></span>
+                </section>
+                <!-- 右边第二部分购物车 -->
+                <section class="top_search_right2">
+                    <section class="cart"></section>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- 我是滚轴变换的导航栏 -->
+    <div class="animate_nav ">
+        <ul class="top_nav_left" style="margin-left: 430px;margin-top: 20px;">
+            <img src="" alt="">
+            <li>
+                <a href="" class="active">首页</a>
+            </li>
+            <li>
+                <a href="">母婴专区</a>
+            </li>
+            <li>
+                <a href="">美妆个护</a>
+            </li>
+            <li>
+                <a href="">健康生活</a>
+            </li>
+            <li>
+                <a href="">数码电器</a>
+            </li>
+            <li>
+                <a href="">服饰箱包</a>
+            </li>
+            <li>
+                <a href="">家居日用</a>
+            </li>
+        </ul>
+        <!-- <div>购物车</div> -->
+    </div>
+    <!-- 轮播图部分 -->
+    <div class="lunbo"></div>
+    <div class="middle">
+        <!-- 导航栏部分 -->
+        <div class="top_nav ">
+            <ul class="top_nav_left">
+                <li>
+                    <a href="" class="active">首页</a>
+                </li>
+                <li>
+                    <a href="">母婴专区</a>
+                </li>
+                <li>
+                    <a href="">美妆个护</a>
+                </li>
+                <li>
+                    <a href="">健康生活</a>
+                </li>
+                <li>
+                    <a href="">数码电器</a>
+                </li>
+                <li>
+                    <a href="">服饰箱包</a>
+                </li>
+                <li>
+                    <a href="">家居日用</a>
+                </li>
+            </ul>
+            <ul class="top_nav_right">
+                <li>
+                    <a href="">正品保障</a>
+                </li>
+                <li>
+                    <a href="">含税包邮</a>
+                </li>
+                <li>
+                    <a href="">快速送达</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 列表页中间的数据部分 -->
+    <div class="center">
+        <!-- 升序排列的按钮 -->
+        <button style="margin:10px 10px">默认排序</button>
+        <button style="margin:10px 10px">升序排序</button>
+        <!-- 渲染的列表 -->
+        <div class="list">
+            <ul>
+
+            </ul>
+        </div>
+        <!-- 分页的点击按钮 -->
+        <div class="pagelist">
+            <div class="m-style page">
+                <!-- 1页 -->
+                <a href="">1</a>
+                <!-- 2页-->
+                <a href="">2</a>
+                <!-- 3页 -->
+                <a href="">3</a>
+                <!-- 输入要找的页数 -->
+                <input type="text">
+                <!-- 跳转 -->
+                <a href="">跳转</a>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div class="bottom ">
+        <!-- 尾部一些详细的介绍 -->
+        <div class="bottom_detail ">
+            <ul>
+                <li>
+                    <span>图片</span> 正品原汁原味
+                </li>
+                <li>
+                    <span>图片</span> 国检监督入仓
+                </li>
+                <li>
+                    <span>图片</span> 快速请关报备
+                </li>
+                <li>
+                    <span>图片</span> 国内物流配送
+                </li>
+                <li class="detail_li">
+                    <span>图片</span> 用户确认收货
+                </li>
+            </ul>
+        </div>
+        <!-- 尾部一些信息，微信QQ这几类 -->
+        <div class="bottom_information ">
+            <section class="infor_left"></section>
+            <section class="infor_mid"></section>
+            <section class="infor_right"></section>
+        </div>
+    </div>
+</body>
+
+</html>
