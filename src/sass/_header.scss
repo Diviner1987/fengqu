@@ -82,7 +82,7 @@ $backgroundurl:url(https://img0.fengqucdn.com/cmsres/20170329/030eede1-1185-4a2d
     .erwei {
         width: 250px;
         height: 250px;
-        border: 1px solid black;
+        // border: 1px solid black;
         position: absolute;
         top: 22px;
         display: flex;
@@ -90,7 +90,7 @@ $backgroundurl:url(https://img0.fengqucdn.com/cmsres/20170329/030eede1-1185-4a2d
         align-items: center;
         flex-direction: column;
         border-radius: 3px;
-        box-shadow: 1px 1px;
+        box-shadow: 2px 2px #eee;
         display: none;
         z-index: 100000;
         .erwei_top {

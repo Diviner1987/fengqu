@@ -1,0 +1,124 @@
+@charset "utf-8";
+$border:1px solid #ccc;
+//详情商品介绍部分
+.detcenter {
+    width: 1180px;
+    background: #fff;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    //详情介绍部分左边
+    .det_left {
+        width: 100px;
+        height: 100px;
+        // border: $border;
+        margin-top: 30px;
+        img {
+            width: 100px;
+            height: 100px;
+            border: 2px solid red;
+        }
+    }
+    //详情介绍部分中间边
+    .det_mid {
+        width: 450px;
+        height: 470px;
+        border: $border;
+        margin-top: 30px;
+        img {
+            width: 449px;
+            height: 468px;
+        }
+    }
+    //详情介绍部分右边
+    .det_right {
+        width: 500px;
+        height: 600px;
+        border: $border;
+        margin-top: 30px;
+        //弹性盒
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        // 右边盒子的标题显示
+        .det_title {
+            width: 500px;
+            height: 50px;
+            border: 1px solid #ccc;
+        }
+        // 右边盒子的倒计时显示
+        .det_date {
+            width: 500px;
+            height: 70px;
+            border: 1px solid red;
+            text-align: center;
+            line-height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .shangou {
+                width: 50px;
+                height: 50px;
+                border: 1px solid red;
+            }
+            .date {
+                width: 500px;
+                height: 50px;
+                border: 1px solid red;
+            }
+        }
+        // 右边盒子的数量显示
+        .det_number {
+            width: 500px;
+            height: 150px;
+            border: 1px solid #ccc;
+        }
+        //购物车部分
+        .cart {
+            width: 500px;
+            // border: 1px solid #000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            line-height: 45px;
+            // margin-top: 400px;
+            //购买和加入购物车
+            .buy {
+                width: 260px;
+                // background: red;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                a {
+                    width: 134px;
+                    height: 45px;
+                    text-decoration: none;
+                    color: #fff;
+                    cursor: pointer;
+                    margin-right: 15px;
+                    background: #dd3e3f;
+                    font-size: 16px;
+                }
+                button {
+                    width: 134px;
+                    height: 45px;
+                    color: #fff;
+                    font-size: 16px;
+                    background: #ff9a40;
+                    cursor: pointer;
+                    border: none;
+                }
+            }
+            //收藏商品 
+            .shangp {
+                width: 100px;
+                // background: orange;
+                cursor: pointer;
+            }
+        }
+    }
+}

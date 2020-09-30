@@ -313,6 +313,16 @@ define(['pagination', 'jlazyload', 'jquery'], function() {
             // $(function(){
             //     const 
             // })
+
+            // $(function() {
+            //     const $list_imgs = $('.list_imgs');
+            //     $list_imgs.on('mouseover', function() {
+            //         $(this).addClass('active').siblings('.list_imgs a ').removeClass('active');
+            //     })
+            // })
+
+
+
         }
     }
 })

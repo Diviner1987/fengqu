@@ -32,7 +32,6 @@
 .headermidleft .erwei {
   width: 250px;
   height: 250px;
-  border: 1px solid black;
   position: absolute;
   top: 22px;
   display: flex;
@@ -40,7 +39,7 @@
   align-items: center;
   flex-direction: column;
   border-radius: 3px;
-  box-shadow: 1px 1px;
+  box-shadow: 2px 2px #eee;
   display: none;
   z-index: 100000;
 }
@@ -104,14 +103,13 @@
 
 .tupian {
   width: 1200px;
-  background: lightskyblue;
   margin: 0 auto;
-  margin-bottom: 5px;
+  margin-bottom: 40px;
   height: 400px;
 }
 .tupian ul {
-  width: 1202px;
-  border: 1px solid #ccc;
+  width: 1260px;
+  margin: 0 -30px;
 }
 .tupian ul li {
   width: 200px;
@@ -119,20 +117,31 @@
   list-style: none;
   float: left;
   border: 1px solid #ccc;
+  margin: 5px 5px;
+}
+
+.list_imgs img:hover {
+  box-shadow: 1px 1px #bbb;
+}
+
+.list_imgs img {
+  width: 200px;
+  height: 200px;
+  border-bottom: red;
 }
 
 .center {
-  width: 1180px;
+  width: 1260px;
   border: 1px solid #ccc;
-  margin: 0 200px;
+  margin: 0 160px;
 }
 .center .list {
   width: 1150px;
-  margin: 0 10px;
+  margin: 0 55px;
   font-size: 14px;
 }
 .center .list li {
-  width: 200px;
+  width: 210px;
   padding: 10px;
   float: left;
   margin: 10px 10px 10px 10px;
@@ -880,7 +889,7 @@ a {
   line-height: 38px;
   color: #000;
   font-size: 14px;
-  background: lightskyblue;
+  background: #b4d9ff;
 }
 
 .m-style .active {
@@ -899,7 +908,7 @@ a {
   width: 38px;
   height: 38px;
   line-height: 38px;
-  background: lightskyblue;
+  background: #b4d9ff;
   border: 1px solid #ebebeb;
   color: #000;
   font-size: 14px;

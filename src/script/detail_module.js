@@ -89,24 +89,23 @@ define([], function() {
                 })
                 //主内容导航栏右边移入的效果
             $(function() {
-                //主内容导航栏右边的效果
-                const $top_nav_right = $('.top_nav_right');
-                //主内容导航栏右边移入的效果
-                $top_nav_right.on('mouseover', ' li a', function() {
-                    $(this).css({
-                        color: '#888'
-                    })
-                });
-                //主内容导航栏右边移出的效果
-                $top_nav_right.on('mouseover', ' li a', function() {
-                    $(this).css({
-                        color: '#999'
-                    })
-                });
+                    //主内容导航栏右边的效果
+                    const $top_nav_right = $('.top_nav_right');
+                    //主内容导航栏右边移入的效果
+                    $top_nav_right.on('mouseover', ' li a', function() {
+                        $(this).css({
+                            color: '#888'
+                        })
+                    });
+                    //主内容导航栏右边移出的效果
+                    $top_nav_right.on('mouseover', ' li a', function() {
+                        $(this).css({
+                            color: '#999'
+                        })
+                    });
 
-            })
-
-            //tab切换
+                })
+                //tab切换
             $(function() {
                     //取到需要加效果的元素
                     const $top_nav_left_li = $('.top_nav_left li ');
@@ -116,21 +115,21 @@ define([], function() {
                 })
                 //鼠标移入显示二维码盒子
             $(function() {
-                    const $app = $('.app');
-                    //鼠标移入显示盒子
-                    $app.on('mouseover', function() {
-                            $('.erwei').css({
-                                display: 'block'
-                            })
-                        })
-                        //移出盒子隐藏
-                    $app.on('mouseout', function() {
+                const $app = $('.app');
+                //鼠标移入显示盒子
+                $app.on('mouseover', function() {
                         $('.erwei').css({
-                            display: 'none'
+                            display: 'block'
                         })
                     })
+                    //移出盒子隐藏
+                $app.on('mouseout', function() {
+                    $('.erwei').css({
+                        display: 'none'
+                    })
                 })
-                //滚轮触发事件产生效果
+            });
+            //滚轮触发事件产生效果
             $(function() {
                 //取到会发生事件的元素,对于发生这个事情是因为滚轴发生的触发来使元素发生运动,出现效果
                 const $float_nav = $('.animate_nav');
@@ -151,7 +150,12 @@ define([], function() {
                         });
                     }
                 })
+            });
+            $(function() {
+
             })
+
+
         }
     }
 });
