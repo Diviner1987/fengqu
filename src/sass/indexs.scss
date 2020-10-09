@@ -1,6 +1,8 @@
     @charset "utf-8";
-    @import "header"; //头部样式
-    @import "top_search"; //搜索部分样式
+    @import "header";
+    @import "top_search";
     @import "animate_nav";
     @import "middle";
     @import "bottom";
+    @import "registry";
+    @import "login";

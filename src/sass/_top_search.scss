@@ -4,8 +4,8 @@ $flexdirection:row;
 $justify: space-between;
 $align:flex-start;
 $backgroundurl:url(https://img0.fengqucdn.com/cmsres/20170329/030eede1-1185-4a2d-a2b6-c9c5a43316df.svg); //logo背景图片
-$background_width:237px; //背景图片的宽
-$background_height:95px; //背景图片的高
+$background_width:235px; //背景图片的宽
+$background_height:140px; //背景图片的高
 $top_search_right2_width:183px; //搜索框右边的购物车宽
 $top_search_right2_height:24px; //搜索框右边的购物车高
 $search_margin:0; //搜索框左边的margin值
@@ -22,21 +22,34 @@ $search_margin:0; //搜索框左边的margin值
 //头部搜索部分
 .top_search {
     @include search_w;
+    margin: 10px auto;
     // @include borderstyle;
     //弹性盒
     display: $display;
     justify-content: $justify;
     align-items: $align;
-    // margin-left: 200px;
-    // @include flex_direction_lr;
     //搜索左边部分的margin值
     .top_search_left {
         // margin-left: $search_margin;
         //logo图的宽高
-        img {
+        .img2 {
+            margin-left: -183px;
+            width: $background_width;
+            height: $background_height;
+        }
+        .img1 {
             margin-left: 20px;
             width: $background_width;
             height: $background_height;
+        }
+        .img3 {
+            width: 240px;
+            height: 150px;
+        }
+        .img4 {
+            margin-left: 13px;
+            width: 240px;
+            height: 150px;
         }
     }
     //搜索右边部分
@@ -47,18 +60,118 @@ $search_margin:0; //搜索框左边的margin值
         align-items: $align;
         // @include flex_direction_lr;
         // 搜索部分右边搜索框的第一块
-        // .top_search_right1 {
-        //     // margin-top: 48px;
-        // }
-        // 搜索部分右边搜索框的第一块
-        .top_search_right2 {
-            //右边的第二部分购物车的一块
-            // margin-top: 43px;
-            .cart {
-                width: $top_search_right2_width;
-                height: $top_search_right2_height;
-                @include borderstyle;
+        .top_search_right1 {
+            margin-top: 45px;
+            // margin-right: 0px;
+            // .search1 {
+            //     margin-right: -250px;
+            // }
+            .top-search-input {
+                width: 300px;
+                height: 40px;
+                line-height: 36px;
+                font-size: 14px;
+                border: 2px solid #E73736;
+                color: #333;
+                padding: 0 17px;
+            }
+            .top-search-btn {
+                width: 76px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                text-decoration: none;
+                background-color: #E73736;
+                color: #fff;
+                font-size: 14px;
+                display: inline-block;
+                margin-left: -5px
+            }
+            .f1 {
+                float: left;
+            }
+            li {
+                float: left;
+                list-style: none;
+            }
+            // li下面的第一个a左边框去掉
+            li:first-child a {
+                border-left: 0 none;
+                padding-left: 0;
+            }
+            li a {
+                cursor: pointer;
+                font-size: 12px;
+                text-decoration: none;
+                color: #666;
+                padding: 0 9px;
+                border-left: 1px solid #ccc;
+                &:hover {
+                    color: #EC6762;
+                }
             }
         }
+        //右边的第二部分购物车的一块
+        .top_search_right2 {
+            // 购物车数量
+            margin-top: 45px;
+            margin-right: 50px;
+            a {
+                width: 123px;
+                height: 100px;
+                text-decoration: none;
+            }
+            .cart-num {
+                width: 54px;
+                background-color: #fff;
+                position: relative;
+                 ::before {
+                    content: '';
+                    height: 100%;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+            .cart-num-inner {
+                background-position: -416px 0;
+                width: 22px;
+                height: 24px;
+                line-height: 22px;
+                margin-left: -1px;
+                font-size: 12px;
+                overflow: hidden;
+                position: absolute;
+                top: -16px;
+                left: 17px;
+            }
+            .header-icon {
+                font-size: 12px;
+                 ::before {
+                    content: ' ';
+                    vertical-align: middle;
+                    display: inline-block;
+                    background-image: url(//img0.fengqucdn.com/fqht/web-common-oss/2.1.43/img/header.png);
+                    background-repeat: no-repeat;
+                    background-size: 17.75em 49.083333333333336em;
+                }
+            }
+        }
+    }
+    // 去购物车结算
+    .cart-item {
+        width: 123px;
+        // height: 50px;
+        background: #eee;
+        vertical-align: top;
+        line-height: 45px;
+        color: #666;
+        font-size: 12px;
+        margin-left: 19px;
+        text-decoration: none;
+    }
+    .cart-num .cart-item {
+        display: inline-block;
+        height: 35px;
+        text-align: center;
     }
 }

@@ -17,11 +17,10 @@ define(['jlazyload', 'jquery'], function() {
                         if (index <= 5) {
                             $strhtml += `
                             <li >
-                                    <a href="indexs.html?sid=${value.sid}">
-                                        <img class="lazy" data-original="${value.url}" width="200" height="200" />
+                                    <a href="indexs.html?sid=${value.sid}"></a>
+                                    <img class="lazy" data-original="${value.url}"width="200" height="200" />
                                         <p>${value.title}</p>
                                         <span>￥${value.price}</span>
-                                    </a>
                             </li>
                             `;
                         }
@@ -40,7 +39,7 @@ define(['jlazyload', 'jquery'], function() {
                 const $list_left = $('.main_day_left ');
                 $list_left.on('mouseover', 'li', function() {
                     $(this).css({
-                        borderBottom: '1px solid  red'
+                        borderBottom: '2px solid  #e73736'
                     });
                 });
                 //鼠标移出左边渲染li的效果
@@ -142,8 +141,9 @@ define(['jlazyload', 'jquery'], function() {
             //tab切换
             $(function() {
                     //取到需要加效果的元素
-                    const $top_nav_left_li = $('.top_nav_left li ');
+                    const $top_nav_left_li = $('.top_nav_left li a');
                     $top_nav_left_li.on('mouseover', function() {
+                        $top_nav_left_li.removeClass('active')
                         $(this).addClass('active').siblings('.top_nav_left li ').removeClass('active');
                     })
                 })
@@ -165,30 +165,82 @@ define(['jlazyload', 'jquery'], function() {
                 })
                 //滚轮触发事件产生效果
             $(function() {
-                    //取到会发生事件的元素,对于发生这个事情是因为滚轴发生的触发来使元素发生运动,出现效果
-                    const $float_nav = $('.animate_nav');
-                    // const $float_mask = $('.mask');
-                    $(window).on('scroll', function() {
-                        //取到滚动条的top值
-                        let $top = $(window).scrollTop();
-                        //当top值大于移出去的高度的时候就将要运动的元素显示效果出来
-                        if ($top >= 400) {
-                            $float_nav.stop(true).animate({
-                                top: 0
-                            });
-                        }
-                        //当小于的时候就将元素运动隐藏,值是不要加单位的
-                        else {
-                            $float_nav.stop(true).animate({
-                                top: -54
-                            });
-                        }
-                    })
+                //取到会发生事件的元素,对于发生这个事情是因为滚轴发生的触发来使元素发生运动,出现效果
+                const $float_nav = $('.animate_nav');
+                // const $float_mask = $('.mask');
+                $(window).on('scroll', function() {
+                    //取到滚动条的top值
+                    let $top = $(window).scrollTop();
+                    //当top值大于移出去的高度的时候就将要运动的元素显示效果出来
+                    if ($top >= 400) {
+                        $float_nav.stop(true).animate({
+                            top: 0
+                        });
+                    }
+                    //当小于的时候就将元素运动隐藏,值是不要加单位的
+                    else {
+                        $float_nav.stop(true).animate({
+                            top: -54
+                        });
+                    }
                 })
-                //     //鼠标移入顶部悬浮的导航栏的固定的导航栏会出现的效果
-                // $(function() {
+            });
+            // 注册的效果
+            $(function() {
+                const $registrys = $('.registry-s');
+                const $mask = $('.registry-mask-zhuce'); //出现遮罩层
+                const $registry = $('.registry'); //出现注册框
+                const $close = $('.close'); //点击按钮的事件
+                //点击注册的效果
+                $registrys.on('click', function() {
+                        $mask.css({
+                            display: 'block'
+                        });
+                        $registry.css({
+                            display: 'block'
+                        });
 
-            //         }
+                    })
+                    // 点击叉号消失
+                $close.on('click', function() {
+                    $mask.css({
+                        display: 'none'
+                    });
+                    $registry.css({
+                        display: 'none'
+                    });
+                })
+            });
+            // 登录的效果
+            $(function() {
+                const $mask = $('.login-mask-zhuce');
+                // const $close = $('.close'); //点击按钮的事件
+                const $logins = $('.login-s'); //点击登录的事件
+                const $login = $('.login');
+                const $close = $('.close');
+                console.log($close);
+                // 点击登录的效果
+                $logins.on('click', function() {
+                        $mask.css({
+                            display: 'block'
+                        });
+                        $login.css({
+                            display: 'block'
+                        });
+                    })
+                    // 点击叉号的效果
+                $close.on('click', function() {
+                    $mask.css({
+                        display: 'none'
+                    });
+                    $login.css({
+                        display: 'none'
+                    });
+                })
+            });
+            // $(function() {
+            //     const $mask = $('.login-mask-zhuce');
+            // })
         }
     }
 })

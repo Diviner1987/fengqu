@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>丰趣购物车页面</title>
+    <link rel="stylesheet" href="./css/cart.css">
+    <link rel="stylesheet" href="./font/iconfont.css">
+    <script src="./font/iconfont.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            vertical-align: top;
+            list-style: none;
+        }
+    </style>
+    <style>
+        .icon {
+            width: 2.5em;
+            height: 2.5em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+            margin-left: 10px;
+            color: red;
+        }
+    </style>
+    <script src="./script/require.js" data-main="./script/main.js" defer async="true" id="currentpage" data-page="cart_module"></script>
+</head>
+
+<body style="background: #f5f5f5;">
+    <!-- 头部介绍登录，注册部分 -->
+    <div class="header">
+        <!-- 头部中间 -->
+        <div class="headermid">
+            <!-- 头部中间的左边 -->
+            <ul class="headermidleft">
+                <li>
+                    <a href="indexs.html">海淘首页</a>
+                </li>
+                <li>
+                    <a href="">登录</a>
+                </li>
+                <li>
+                    <a href="">注册</a>
+                </li>
+            </ul>
+            <!-- 头部中间的右边 -->
+            <ul class="headermidleft">
+                <li>
+                    <a href="" class="app">
+                下载丰趣海淘APP
+            </a>
+                    <div class="erwei" style="background: #fff;">
+                        <div class="erwei_top">
+                            <img src="" alt="">
+                        </div>
+                        <div class="erwei_down">
+                            <img src="https://img0.fengqucdn.com/cmsres/20151218/e915eb46-09e1-4988-a3d8-39c85ac47f09.png" alt="" style="width: 100px;height: 100px;margin-left: 70px;margin-top: 20px;">
+                            <p style="margin-left: 80px;">扫一扫下载</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="">我的订单</a>
+                </li>
+                <li>
+                    <a href="">个人中心</a>
+                </li>
+                <li>
+                    <a href="">联系客服</a>
+                </li>
+                <li>
+                    <a href="">关于我们</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 头顶部的搜索部分 -->
+    <div class="top_search">
+        <div class="top_search ">
+            <!-- 搜索部分的左边 -->
+            <div class="top_search_left">
+                <img src="https://img0.fengqucdn.com/cmsres/20170329/030eede1-1185-4a2d-a2b6-c9c5a43316df.svg" alt="" class="img4">
+            </div>
+            <!-- 搜索部分的右边 -->
+            <div class="top_search_right" style="margin-right: 0px;">
+                <!-- 右边的第一部分搜索框-->
+                <section class="top_search_right1 ">
+                    <div>
+                        <input type="text" class="top-search-input fl">
+                        <a href="" class="top-search-btn fl">搜索</a>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="#">奶粉</a>
+
+                        </li>
+                        <li>
+                            <a href="#"> 面膜</a>
+
+                        </li>
+                        <li>
+                            <a href="#"> 纸尿裤</a>
+
+                        </li>
+                        <li>
+                            <a href="#"> 乐而雅</a>
+
+                        </li>
+                        <li>
+                            <a href="#">防晒</a>
+
+                        </li>
+                        <li>
+                            <a href="#">爽肤水</a>
+
+                        </li>
+                        <li>
+                            <a href="#">Skin</a>
+
+                        </li>
+                        <li>
+                            <a href="#">DHC</a>
+
+                        </li>
+                    </ul>
+                </section>
+                <!-- 右边第二部分购物车 -->
+                <section class="top_search_right2">
+                    <a href="#">
+                        <span class="cart-num">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-gouwuchekong
+                                "></use>
+                              </svg>
+                        </span>
+                        <span class="cart-item">
+                            去购物车结算
+                        </span>
+                    </a>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="cartinfor" style="background: #f5f5f5;">
+        <!-- 表明商品的信息 -->
+        <div class="div1">
+            <div class="cart-col t-checkbox">
+                <div class="cart-checkbox">
+                    <input type="checkbox" checked="" name="" id="" class="allsel" value="" /> 全选
+                </div>
+            </div>
+            <div class="cart-col t-goods">商品</div>
+            <div class="cart-col t-props"></div>
+            <div class="cart-col t-prices">单价(元)</div>
+            <div class="cart-col t-quantity">数量</div>
+            <div class="cart-col t-sum">小计(元)</div>
+            <div class="cart-col t-action">操作</div>
+        </div>
+        <!-- 标明你选中的商品，可以全选 -->
+        <div class="div2">
+            <div id="cart-list">
+                <div class="cart-item-list">
+                    <div class="cart-tbody">
+                        <!-- 显示购物车列表 -->
+                        <div class="item-list">
+                            <div class="goods-item goods-item-sele" style="display: none;">
+                                <div class="goods-info">
+                                    <div class="cell b-checkbox">
+                                        <div class="cart-checkbox">
+                                            <input type="checkbox" checked="" name="" id="" value="" />
+                                            <span class="line-circle"></span>
+                                        </div>
+                                    </div>
+                                    <div class="cell b-goods">
+                                        <div class="goods-name">
+                                            <div class="goods-pic">
+                                                <a href=""><img src="" alt="" /></a>
+                                            </div>
+                                            <div class="goods-msg">
+                                                <div class="goods-d-info">
+                                                    <a href="">Apple iMac 27英寸一体机（Core i5
+                                                        处理器/8GB内存/1TB存储/2GB独显/Retina 5K屏 MK462CH/A）</a>
+                                                </div>
+                                                <div class="goods-ex">
+                                                    <span class="promise"></span>
+                                                    <span class="promise">
+                                                        <i></i><a href="">购买京东服务</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell b-props">
+                                        <div class="prop-text"></div>
+                                    </div>
+                                    <div class="cell b-price">
+                                        <strong>13488.00</strong>
+                                        <a class="sales-promotion" href="">
+                                            促销优惠
+                                            <b></b>
+                                        </a>
+                                        <div class="sales-promotion-dropdown">
+                                        </div>
+                                    </div>
+                                    <div class="cell b-quantity">
+                                        <div class="quantity-form">
+                                            <a class="quantity-down" href="javascript:void(0)">-</a>
+                                            <input type="text" value="1" />
+                                            <a class="quantity-add" href="javascript:void(0)">+</a>
+                                        </div>
+                                        <div class="quantity-text">有货</div>
+                                    </div>
+                                    <div class="cell b-sum">
+                                        <strong>13488.00</strong>
+                                    </div>
+                                    <div class="cell b-action">
+                                        <a href="javascript:void(0)">删除</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 将不喜欢的商品全选删掉 -->
+        <div class="div3">
+            <div class="select-all">
+                <div class="cart-checkbox">
+                    <input type="checkbox" checked="" name="" id="" class="allsel" value="" /> 全选
+                </div>
+            </div>
+            <div class="operation">
+                <a href="javascript:void(0)">删除选中的商品</a>
+            </div>
+            <div class="toolbar-right">
+                <div class="btn-area">
+                    <a href=""></a>
+                </div>
+                <div class="price-sum">
+                    <span class="txt">总价（不含运费）：</span>
+                    <span class="totalprice">￥0.00</span>
+                    <span class="txt">已节省：</span>
+                    <span class="totalsave">-￥0.00</span>
+                </div>
+                <div class="amount-sum">
+                    已选择
+                    <em>0</em> 件商品
+                    <b></b>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div class="bottom ">
+        <!-- 尾部一些详细的介绍 -->
+        <div class="bottom_detail ">
+            <ul>
+                <li>
+                    <span class="iconfont icon-diqiu"></span> 正品原汁原味
+                </li>
+                <li>
+                    <span class="iconfont icon-gouwuchekong"></span> 国检监督入仓
+                </li>
+                <li>
+                    <span class="iconfont icon-liebiao"></span> 快速请关报备
+                </li>
+                <li>
+                    <span class="iconfont icon-che"></span> 国内物流配送
+                </li>
+                <li class="detail_li">
+                    <span class="iconfont icon-baoguo02 "></span> 用户确认收货
+                </li>
+            </ul>
+        </div>
+        <!-- 尾部一些信息，微信QQ这几类 -->
+        <div class="bottom_information ">
+            <section class="infor_left">
+                <div class="infor1">
+                    <img src="https://img0.fengqucdn.com/cmsres/20170329/030eede1-1185-4a2d-a2b6-c9c5a43316df.svg" alt="" style="width: 300px;height: 130px;">
+                </div>
+                <div class="infor2">
+                    <span style="margin-right: 10px;font-size: 12px;">关于我们</span>
+                    <!-- 微博 -->
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-weibo"></use>
+                      </svg>
+                    <!-- 微信 -->
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-weixin
+                        "></use>
+                      </svg>
+                </div>
+            </section>
+            <!-- 中间的文字部分 -->
+            <section class="infor_mid">
+                <div>
+                    <div>
+                        <h3 style="font-weight: 10;color:#3E3A39;margin-bottom: 40px;">丰趣海淘</h3>
+                    </div>
+                    <div>
+                        <p style="font-size: 12px;color: #999;margin-bottom: 5px;">关于我们</p>
+                        <p style="font-size: 12px;color: #999;margin-bottom: 5px;">法律政策</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h3 style="font-weight: 10;color:#3E3A39;margin-bottom: 3px;">新手指南</h3>
+                    </div>
+                    <div>
+                        <p style="font-size: 12px;color: #999;padding-top: 5px;">正品保证</p>
+                        <p style="font-size: 12px;color: #999;margin-bottom: 10px;margin-top: 10px;">购物指南</p>
+                        <p style="font-size: 12px;color: #999;margin-bottom: 10px;margin-top: 10px;">费用说明</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h3 style="font-weight: 10;color:#3E3A39;margin-bottom: 30px;">帮助中心</h3>
+                    </div>
+                    <div>
+                        <p style="font-size: 12px;color: #999;margin-bottom: 10px;">签收说明</p>
+                        <p style="font-size: 12px;color: #999;margin-bottom: 10px;">运输时效</p>
+                    </div>
+
+                </div>
+                <div>
+                    <div>
+                        <h3 style="font-weight: 10;color:#3E3A39;margin-top: 5px;">联系我们</h3>
+                    </div>
+                    <div style="margin-top: 10px;">
+                        <p style="font-size: 12px;color: #999;margin-bottom: 10px;">在线客服(周一至周日 9:00-21:00)</p>
+                        <p style="font-size: 12px;color: #999;margin-bottom: 10px;">客服中心</p>
+                        <p style="font-size: 12px;color: #999;margin-bottom: 10px;">加入我们</p>
+                    </div>
+                </div>
+            </section>
+            <section class="infor_right">
+                <p>扫一扫下载APP</p>
+                <img src="" alt="">
+            </section>
+        </div>
+
+    </div>
+</body>
+
+</html>

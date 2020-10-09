@@ -1,6 +1,7 @@
 define([], function() {
     return {
         init: function() {
+
             //鼠标移入移出左边渲染li的效果
             $(function() {
                 //左边的li的效果
@@ -108,8 +109,9 @@ define([], function() {
                 //tab切换
             $(function() {
                     //取到需要加效果的元素
-                    const $top_nav_left_li = $('.top_nav_left li ');
+                    const $top_nav_left_li = $('.top_nav_left li a');
                     $top_nav_left_li.on('mouseover', function() {
+                        $top_nav_left_li.removeClass('active')
                         $(this).addClass('active').siblings('.top_nav_left li ').removeClass('active');
                     })
                 })
@@ -151,11 +153,41 @@ define([], function() {
                     }
                 })
             });
+            //鼠标移入小图片的时候会将图片放大的效果
             $(function() {
+                //1.获取列表页传来的sid
+                let $sid = location.search.substring(1).split('=')[1];
+
+                // const $smallpic = $('#smallpic');
+                const $bpic = $('#bpic');
+                const $smaller = $('#smaller');
+                const $title = $('.loadtitle');
+                const $price = $('.loadpcp');
+
+                //如果$sid不存在，默认$sid = 1
+                if (!$sid) {
+                    $sid = 1;
+                }
+                $.ajax({
+                    url: 'http://localhost/fengqu/php/fengqu.php',
+                    data: {
+                        sid: $sid
+                    },
+                    dataType: 'json'
+                }).done(function(data) {
+                    console.log(890);
+                    let objdata = data;
+                    console.log(objdata);
+                    // $smallpic.attr('src', objdata.url);
+                    // $smallpic.attr('sid', objdata.sid); //给图片添加唯一的sid
+                    $bpic.attr('src', objdata.url);
+                    $smaller.attr('src', objdata.url);
+                    $title.html(objdata.title);
+                    $price.html(objdata.price);
+                    // console.log(d.piclisturl.split(','));
+                })
 
             })
-
-
         }
     }
-});
+})

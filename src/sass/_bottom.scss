@@ -2,7 +2,7 @@
 $bottomheight:350px; //底部的高度
 $bottom_detailh:80px; //底部详细介绍的高度
 $bootomcolor:#3E3A39; //底部详细介绍的颜色
-$bottom_informationh:270px; //底部咨询信息的高度
+$bottom_informationh:200px; //底部咨询信息的高度
 $bottomposition1:relative; //相对定位
 $bottomposition2:absolute; //绝对定位
 $bottom_detail_width: 1180px;
@@ -135,10 +135,14 @@ $bottom_detail_height:54px;
             @include border-right;
             // @include detail_margin_r;
             @include detail_padding;
-            span {
-                //图片的span标签
+            .iconfont {
+                font-size: 40px;
                 @include detail_margin_r;
                 @include detail_margin_l;
+            }
+            .icon-baoguo02 {
+                font-size: 40px;
+                margin-right: 0;
             }
         }
         .detail_li {
@@ -149,7 +153,57 @@ $bottom_detail_height:54px;
 
 // 底部的咨询信息部分
 .bottom_information {
-    @include bottomwidth;
+    width: 1180px;
     height: $bottom_informationh;
-    @include borderstyle;
+    margin-left: 252px;
+    // @include borderstyle;
+    // 加弹性盒
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    //左边的部分
+    .infor_left {
+        width: 20%;
+        // border: 1px solid black;
+        // 弹性盒
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+    // 中间的部分
+    .infor_mid {
+        width: 60%;
+        // border: 1px solid black;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .div {
+            border: 1px solid black;
+            p {
+                font-size: 12px;
+                color: #999;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    // 右边的部分
+    .infor_right {
+        width: 20%;
+        // border: 1px solid black;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        img {
+            background: url('https://img0.fengqucdn.com/cmsres/20151218/e915eb46-09e1-4988-a3d8-39c85ac47f09.png');
+            width: 100px;
+            height: 100px;
+            // border: 1px solid black; 
+        }
+    }
 }

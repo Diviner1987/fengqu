@@ -12,13 +12,13 @@ define(['pagination', 'jlazyload', 'jquery'], function() {
                 .done((data) => {
                     let $renderdata = data;
                     console.log(data);
-                    let $strhtml = ''; //拼接字符串
+                    let $strhtml = '<ul>'; //拼接字符串
                     $.each($renderdata, function(index, value) {
                         //拼接渲染
 
                         $strhtml += `
                             <li >
-                                    <a href="indexs.html?sid=${value.sid}">
+                                    <a href="detail.html?sid=${value.sid}">
                                         <img class="lazy" data-original="${value.url}" width="200" height="200" />
                                         <p>${value.title}</p>
                                         <span>￥${value.price}</span>
@@ -27,7 +27,8 @@ define(['pagination', 'jlazyload', 'jquery'], function() {
                             `;
 
                     });
-                    // 将渲染的数据追加
+                    $strhtml += '</ul>'
+                        // 将渲染的数据追加
                     $list.html($strhtml);
                     // 懒加载效果
                     $("img.lazy").lazyload({
@@ -259,8 +260,9 @@ define(['pagination', 'jlazyload', 'jquery'], function() {
             //tab切换
             $(function() {
                     //取到需要加效果的元素
-                    const $top_nav_left_li = $('.top_nav_left li ');
+                    const $top_nav_left_li = $('.top_nav_left li a');
                     $top_nav_left_li.on('mouseover', function() {
+                        $top_nav_left_li.removeClass('active')
                         $(this).addClass('active').siblings('.top_nav_left li ').removeClass('active');
                     })
                 })
@@ -309,19 +311,6 @@ define(['pagination', 'jlazyload', 'jquery'], function() {
                     $(this).addClass('active').siblings('.animate li a ').removeClass('active');
                 });
             });
-            //点击列表页的某块会进入详情页
-            // $(function(){
-            //     const 
-            // })
-
-            // $(function() {
-            //     const $list_imgs = $('.list_imgs');
-            //     $list_imgs.on('mouseover', function() {
-            //         $(this).addClass('active').siblings('.list_imgs a ').removeClass('active');
-            //     })
-            // })
-
-
 
         }
     }

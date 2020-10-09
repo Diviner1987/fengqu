@@ -1,0 +1,686 @@
+@charset "UTF-8";
+.header {
+  width: 100%;
+  height: 30px;
+  margin: 0px auto;
+  background: #3E3A39;
+}
+
+.headermid {
+  width: 1180px;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.headermidleft {
+  margin-top: 7px;
+  position: relative;
+}
+.headermidleft li {
+  list-style: none;
+  float: left;
+}
+.headermidleft li a {
+  font: 12px/1.14 "微软雅黑";
+  text-decoration: none;
+  color: #ccc;
+  margin-left: 20px;
+}
+.headermidleft .erwei {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 3px;
+  box-shadow: 2px 2px #eee;
+  display: none;
+  z-index: 100000;
+}
+.headermidleft .erwei .erwei_top {
+  width: 200px;
+  height: 70px;
+  margin-left: 20px;
+  border-bottom: 1px solid black;
+}
+.headermidleft .erwei .erwei_down {
+  width: 250px;
+  height: 120px;
+}
+
+.top_search {
+  width: 1180px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.top_search .top_search_left .img2 {
+  margin-left: -183px;
+  width: 235px;
+  height: 140px;
+}
+.top_search .top_search_left .img1 {
+  margin-left: 20px;
+  width: 235px;
+  height: 140px;
+}
+.top_search .top_search_left .img3 {
+  width: 240px;
+  height: 150px;
+}
+.top_search .top_search_left .img4 {
+  margin-left: 13px;
+  width: 240px;
+  height: 150px;
+}
+.top_search .top_search_right {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.top_search .top_search_right .top_search_right1 {
+  margin-top: 45px;
+}
+.top_search .top_search_right .top_search_right1 .top-search-input {
+  width: 300px;
+  height: 40px;
+  line-height: 36px;
+  font-size: 14px;
+  border: 2px solid #E73736;
+  color: #333;
+  padding: 0 17px;
+}
+.top_search .top_search_right .top_search_right1 .top-search-btn {
+  width: 76px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #E73736;
+  color: #fff;
+  font-size: 14px;
+  display: inline-block;
+  margin-left: -5px;
+}
+.top_search .top_search_right .top_search_right1 .f1 {
+  float: left;
+}
+.top_search .top_search_right .top_search_right1 li {
+  float: left;
+  list-style: none;
+}
+.top_search .top_search_right .top_search_right1 li:first-child a {
+  border-left: 0 none;
+  padding-left: 0;
+}
+.top_search .top_search_right .top_search_right1 li a {
+  cursor: pointer;
+  font-size: 12px;
+  text-decoration: none;
+  color: #666;
+  padding: 0 9px;
+  border-left: 1px solid #ccc;
+}
+.top_search .top_search_right .top_search_right1 li a:hover {
+  color: #EC6762;
+}
+.top_search .top_search_right .top_search_right2 {
+  margin-top: 45px;
+  margin-right: 50px;
+}
+.top_search .top_search_right .top_search_right2 a {
+  width: 123px;
+  height: 100px;
+  text-decoration: none;
+}
+.top_search .top_search_right .top_search_right2 .cart-num {
+  width: 54px;
+  background-color: #fff;
+  position: relative;
+}
+.top_search .top_search_right .top_search_right2 .cart-num ::before {
+  content: '';
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.top_search .top_search_right .top_search_right2 .cart-num-inner {
+  background-position: -416px 0;
+  width: 22px;
+  height: 24px;
+  line-height: 22px;
+  margin-left: -1px;
+  font-size: 12px;
+  overflow: hidden;
+  position: absolute;
+  top: -16px;
+  left: 17px;
+}
+.top_search .top_search_right .top_search_right2 .header-icon {
+  font-size: 12px;
+}
+.top_search .top_search_right .top_search_right2 .header-icon ::before {
+  content: ' ';
+  vertical-align: middle;
+  display: inline-block;
+  background-image: url(//img0.fengqucdn.com/fqht/web-common-oss/2.1.43/img/header.png);
+  background-repeat: no-repeat;
+  background-size: 17.75em 49.083333333333336em;
+}
+.top_search .cart-item {
+  width: 123px;
+  background: #eee;
+  vertical-align: top;
+  line-height: 45px;
+  color: #666;
+  font-size: 12px;
+  margin-left: 19px;
+  text-decoration: none;
+}
+.top_search .cart-num .cart-item {
+  display: inline-block;
+  height: 35px;
+  text-align: center;
+}
+
+.cartinfor {
+  height: 300x;
+  width: 1180px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.cartinfor .div1 {
+  width: 1180px;
+  height: 60px;
+  background: #353a42;
+  color: #c0c0c0;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.cartinfor .div1 .cart-col {
+  float: left;
+}
+.cartinfor .div1 .t-checkbox {
+  height: 18px;
+  line-height: 18px;
+  padding-top: 0px;
+  width: 122px;
+  margin-left: -20px;
+}
+.cartinfor .div1 .cart-checkbox input {
+  margin-right: 5px;
+}
+.cartinfor .div1 .t-goods {
+  width: 208px;
+}
+.cartinfor .div1 .t-props {
+  width: 140px;
+  height: 32px;
+  padding: 0 20px;
+  text-align: right;
+}
+.cartinfor .div1 .t-prices {
+  width: 120px;
+  padding-right: 40px;
+  text-align: right;
+  height: 32px;
+  margin-top: 15px;
+}
+.cartinfor .div1 .t-quantity {
+  text-align: center;
+  width: 80px;
+}
+.cartinfor .div1 .t-sum {
+  width: 100px;
+  padding-right: 40px;
+  text-align: right;
+}
+.cartinfor .div2 .cart-item-list {
+  margin-bottom: 20px;
+}
+.cartinfor .div2 .cart-item-list .shop {
+  height: 30px;
+  line-height: 30px;
+  padding-left: 11px;
+  font-weight: 700;
+}
+.cartinfor .div2 .shop .cart-checkbox {
+  float: left;
+}
+.cartinfor .div2 .shop .shop-info {
+  float: left;
+  width: 538px;
+}
+.cartinfor .div2 .shop .shop-info a {
+  display: block;
+  margin-top: 6px;
+  width: 54px;
+  height: 18px;
+}
+.cartinfor .div2 .shop .shop-ex {
+  float: right;
+  font-weight: 400;
+}
+.cartinfor .div2 .shop .shop-ex span {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: -3px 0 0 5px;
+  vertical-align: middle;
+}
+.cartinfor .div2 .item-list {
+  border-style: solid;
+  border-width: 2px 1px 1px;
+  border-color: #aaa #f1f1f1 #f1f1f1;
+  background: #fff;
+}
+.cartinfor .div2 .item-head {
+  height: 26px;
+  padding: 5px 10px;
+  overflow: hidden;
+}
+.cartinfor .div2 .item-head .header-left {
+  width: 750px;
+  line-height: 26px;
+  float: left;
+}
+.cartinfor .div2 .header-left-p1 {
+  color: #666;
+}
+.cartinfor .div2 .header-left-p1 span {
+  margin: 0 10px 0 5px;
+  padding: 1px 10px;
+  border: 1px solid #f48719;
+  background: #f48719;
+  color: white;
+  position: relative;
+}
+.cartinfor .div2 .header-left-p1 span b {
+  position: absolute;
+  display: block;
+  width: 5px;
+  height: 6px;
+  left: -1px;
+  bottom: -5px;
+}
+.cartinfor .div2 .header-left-p2 {
+  margin-left: 20px;
+  padding: 0 5px;
+  border-radius: 2px;
+  background: #e74649;
+  color: white;
+  display: inline-block;
+  height: 19px;
+  line-height: 19px;
+}
+.cartinfor .div2 .header-price {
+  width: 100px;
+  float: left;
+  text-align: right;
+}
+.cartinfor .div2 .goods-item {
+  padding: 0 10px 0 40px;
+  position: relative;
+}
+.cartinfor .div2 .goods-item-sele {
+  background: #fff4e8;
+}
+.cartinfor .div2 .goods-info {
+  border-top: 1px solid #f1f1f1;
+  overflow: hidden;
+}
+.cartinfor .div2 .cell {
+  float: left;
+}
+.cartinfor .div2 .b-checkbox {
+  position: absolute;
+  left: 10px;
+  width: 30px;
+  height: 20px;
+  padding: 15px 0 10px 0;
+}
+.cartinfor .div2 .goods-item .cart-checkbox input {
+  position: absolute;
+  z-index: 2;
+}
+.cartinfor .div2 .cart-checkbox .line-circle {
+  position: absolute;
+  left: 2px;
+  top: -5px;
+  display: block;
+  width: 7px;
+  height: 29px;
+}
+.cartinfor .div2 .goods-item .b-goods {
+  width: 300px;
+  padding: 15px 0 10px 0;
+}
+.cartinfor .div2 .b-goods .goods-name .goods-pic {
+  width: 82px;
+  height: 82px;
+  margin-right: 10px;
+  border: 1px solid #eee;
+  float: left;
+}
+.cartinfor .div2 .b-goods .goods-name .goods-pic img {
+  width: 80px;
+  height: 80px;
+}
+.cartinfor .div2 .goods-d-info {
+  height: 40px;
+  line-height: 20px;
+  overflow: hidden;
+}
+.cartinfor .div2 .goods-ex {
+  margin-top: 2px;
+}
+.cartinfor .div2 .goods-ex .promise {
+  margin: 0 10px 0 0;
+  display: block;
+  min-height: 18px;
+  line-height: 18px;
+  margin-bottom: 2px;
+}
+.cartinfor .div2 .promise i {
+  display: inline-block;
+  width: 17px;
+  height: 16px;
+  vertical-align: middle;
+}
+.cartinfor .div2 .promise a {
+  display: inline-block;
+  padding: 1px 4px 0 7px;
+  height: 15px;
+  line-height: 15px;
+  vertical-align: middle;
+}
+.cartinfor .div2 .b-props {
+  height: 80px;
+  padding: 15px 10px 0 10px;
+  overflow: hidden;
+}
+.cartinfor .div2 .b-props .prop-text {
+  width: 160px;
+}
+.cartinfor .div2 .b-price {
+  width: 120px;
+  padding: 15px 40px 10px 0;
+  overflow: hidden;
+  text-align: right;
+}
+.cartinfor .div2 .b-price .sales-promotion {
+  display: block;
+  width: 53px;
+  border: 1px solid #f9d2d3;
+  color: #e4393c;
+  height: 18px;
+  text-align: left;
+  line-height: 17px;
+  padding: 0 15px 0 8px;
+  cursor: pointer;
+  background: #fff;
+  text-decoration: none;
+  float: right;
+  overflow: hidden;
+  position: relative;
+}
+.cartinfor .div2 .sales-promotion b {
+  display: inline-block;
+  width: 7px;
+  height: 4px;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+}
+.cartinfor .div2 .b-quantity {
+  width: 80px;
+  padding: 15px 0 10px;
+}
+.cartinfor .div2 .b-quantity .quantity-form {
+  position: relative;
+  overflow: hidden;
+  height: 20px;
+  border: 1px solid #cacbcb;
+}
+.cartinfor .div2 .quantity-form a {
+  display: inline-block;
+  height: 18px;
+  line-height: 18px;
+  padding: 1px 0;
+  width: 16px;
+  text-align: center;
+  color: #666;
+  margin: 0;
+  background: #fff;
+  float: left;
+}
+.cartinfor .div2 .quantity-form .quantity-down {
+  border-right: 1px solid #cacbcb;
+}
+.cartinfor .div2 .quantity-form .quantity-add {
+  border-left: 1px solid #cacbcb;
+}
+.cartinfor .div2 .quantity-form input {
+  width: 44px;
+  height: 22px;
+  float: left;
+  text-align: center;
+  background: white;
+}
+.cartinfor .div2 .quantity-text {
+  text-align: center;
+  height: 20px;
+  line-height: 20px;
+}
+.cartinfor .div2 .b-sum {
+  width: 100px;
+  height: 20px;
+  padding: 15px 40px 15px 0;
+  text-align: right;
+}
+.cartinfor .div2 .b-sum strong {
+  color: #333;
+  font-weight: 700;
+  font-size: 14px;
+}
+.cartinfor .div2 .b-action {
+  padding: 15px 0 10px 0;
+}
+.cartinfor .div2 .b-action a {
+  display: block;
+  width: 75px;
+  height: 20px;
+}
+.cartinfor .div3 .select-all {
+  float: left;
+  height: 18px;
+  line-height: 18px;
+  padding: 16px 0 16px 9px;
+  font-size: 13px;
+}
+.cartinfor .div3 .operation {
+  float: left;
+  height: 50px;
+  width: 310px;
+  line-height: 50px;
+}
+.cartinfor .div3 .operation a {
+  margin-left: 20px;
+  display: inline-block;
+  height: 50px;
+  text-decoration: none;
+  color: #333;
+  font-size: 13px;
+}
+.cartinfor .div3 .toolbar-right {
+  overflow: hidden;
+}
+.cartinfor .div3 .toolbar-right .btn-area {
+  float: right;
+}
+.cartinfor .div3 .btn-area a {
+  display: block;
+  width: 96px;
+  height: 52px;
+}
+.cartinfor .div3 .price-sum {
+  float: right;
+  height: 43px;
+  line-height: 20px;
+  margin: 7px 20px 0 10px;
+  color: #666;
+  width: 220px;
+}
+.cartinfor .div3 .price-sum span {
+  display: inline-block;
+  height: 20px;
+  float: left;
+  text-align: left;
+}
+.cartinfor .div3 .price-sum .txt {
+  text-align: right;
+  font-size: 13px;
+}
+.cartinfor .div3 .price-sum .totalprice {
+  font-size: 13px;
+  color: #e4393c;
+  font-weight: 700;
+}
+.cartinfor .div3 .amount-sum {
+  float: right;
+  color: #999;
+  height: 44px;
+  line-height: 20px;
+  margin: 7px 0 0;
+  cursor: pointer;
+  font-size: 13px;
+}
+.cartinfor .div3 .amount-sum em {
+  color: #e4393c;
+  font-family: verdana;
+  font-weight: 700;
+  margin: 0 3px;
+  font-size: 13px;
+}
+.cartinfor .div3 .amount-sum b {
+  display: inline-block;
+  width: 9px;
+  height: 5px;
+  vertical-align: middle;
+  font-size: 13px;
+}
+
+.bottom {
+  width: 100%;
+  height: 350px;
+  border: 1px solid #ccc;
+}
+.bottom .mask {
+  z-index: 5000;
+  width: 100%;
+  height: 100px;
+  background: violet;
+  position: fixed;
+  bottom: 0;
+  display: block;
+  position: relative;
+}
+.bottom .mask .guanggao {
+  width: 960px;
+  height: 70px;
+  background: yellowgreen;
+  position: absolute;
+  top: 10px;
+  left: 50px;
+}
+
+.bottom_detail {
+  width: 100%;
+  height: 80px;
+  border: 1px solid #ccc;
+  background: #3E3A39;
+}
+.bottom_detail ul {
+  width: 1180px;
+  height: 54px;
+  margin: 10px auto;
+}
+.bottom_detail ul li {
+  list-style: none;
+  float: left;
+  color: #fff;
+  text-align: center;
+  line-height: 54px;
+  border-right: 1px solid #ccc;
+  padding-right: 25px;
+}
+.bottom_detail ul li .iconfont {
+  font-size: 40px;
+  margin-right: 25px;
+  margin-left: 45px;
+}
+.bottom_detail ul li .icon-baoguo02 {
+  font-size: 40px;
+  margin-right: 0;
+}
+.bottom_detail ul .detail_li {
+  border-right: none;
+}
+
+.bottom_information {
+  width: 1180px;
+  height: 200px;
+  margin-left: 252px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.bottom_information .infor_left {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.bottom_information .infor_mid {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.bottom_information .infor_mid .div {
+  border: 1px solid black;
+}
+.bottom_information .infor_mid .div p {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 10px;
+}
+.bottom_information .infor_right {
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.bottom_information .infor_right p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.bottom_information .infor_right img {
+  background: url("https://img0.fengqucdn.com/cmsres/20151218/e915eb46-09e1-4988-a3d8-39c85ac47f09.png");
+  width: 100px;
+  height: 100px;
+}
+
+/*# sourceMappingURL=cart.css.map */

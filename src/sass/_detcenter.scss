@@ -1,107 +1,220 @@
-@charset "utf-8";
-$border:1px solid #ccc;
-//详情商品介绍部分
-.detcenter {
-    width: 1180px;
-    background: #fff;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    margin-bottom: 20px;
-    //详情介绍部分左边
-    .det_left {
-        width: 100px;
-        height: 100px;
-        // border: $border;
-        margin-top: 30px;
-        img {
-            width: 100px;
-            height: 100px;
-            border: 2px solid red;
-        }
-    }
-    //详情介绍部分中间边
-    .det_mid {
-        width: 450px;
-        height: 470px;
-        border: $border;
-        margin-top: 30px;
-        img {
-            width: 449px;
-            height: 468px;
-        }
-    }
-    //详情介绍部分右边
-    .det_right {
-        width: 500px;
-        height: 600px;
-        border: $border;
-        margin-top: 30px;
-        //弹性盒
-        display: flex;
-        justify-content: space-around;
-        flex-direction: column;
-        align-items: center;
-        // 右边盒子的标题显示
-        .det_title {
-            width: 500px;
-            height: 50px;
-            border: 1px solid #ccc;
-        }
-        // 右边盒子的倒计时显示
-        .det_date {
-            width: 500px;
-            height: 70px;
-            border: 1px solid red;
-            text-align: center;
-            line-height: 50px;
+        @charset "utf-8";
+        $border:1px solid #ccc;
+        .detcenter {
+            width: 1180px;
+            background: #fff;
+            margin: 0 auto;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            .shangou {
-                width: 50px;
-                height: 50px;
-                border: 1px solid red;
+            justify-content: space-around;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            .det_left {
+                width: 100px;
+                height: 100px;
+                // border: $border;
+                margin-top: 30px;
+                img {
+                    width: 100px;
+                    height: 100px;
+                    border: 2px solid red;
+                }
             }
-            .date {
+            .det_mid {
+                .wrap {
+                    float: left;
+                    position: relative;
+                    margin-top: 30px;
+                }
+                #spic {
+                    width: 400px;
+                    height: 400px;
+                    border: 1px solid #000;
+                    float: left;
+                    position: relative;
+                }
+                #spic img {
+                    width: 400px;
+                    height: 400px;
+                }
+                #sf {
+                    width: 50px;
+                    height: 50px;
+                    background: orange;
+                    opacity: 0.3;
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                    visibility: hidden;
+                }
+                #bf {
+                    width: 400px;
+                    height: 500px;
+                    border: 1px solid #000;
+                    overflow: hidden;
+                    position: absolute;
+                    left: 410px;
+                    visibility: hidden;
+                    z-index: 100;
+                }
+                #bf img {
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                    width: 800px;
+                    height: 800px;
+                }
+            }
+            .det_right {
+                width: 520px;
+                height: 600px;
+                border: $border;
+                margin-top: 30px;
+                display: flex;
+                justify-content: space-around;
+                flex-direction: column;
+                align-items: center;
+                // .det_title {
+                //     width: 500px;
+                //     height: 50px;
+                //     // border: 1px solid #ccc;
+                //     p {
+                //         color: #686675;
+                //         font-size: 14px;
+                //     }
+                // }
+                // .det_price {
+                //     width: 500px;
+                //     height: 70px;
+                //     border: 1px solid #ccc;
+                //     margin-top: 50px;
+                // }
+                .p-name {
+                    width: 350px;
+                    height: 50px;
+                    margin-left: 50px;
+                    margin-top: 20px;
+                }
+                .p-name .loadtitle {
+                    font-size: 16px;
+                    color: #666666;
+                }
+                .p-price {
+                    margin-left: 50px;
+                    margin-top: 10px;
+                    width: 300px;
+                    height: 50px;
+                    background: rgba(183, 183, 183, 0.4);
+                    line-height: 50px;
+                }
+                .p-btn {
+                    margin-top: 20px;
+                }
+                .p-btn input {
+                    display: inline-block;
+                    width: 50px;
+                    height: 46px;
+                    font-size: 20px;
+                    color: black;
+                    margin-left: 50px;
+                    border: 1px solid gray;
+                    float: left;
+                }
+                .p-btn a {
+                    display: block;
+                    width: 100px;
+                    height: 50px;
+                    // background-color: #ff8140;
+                    font-size: 16px;
+                    color: white;
+                    line-height: 50px;
+                    text-align: center;
+                    float: left;
+                    margin-left: 10px;
+                }
+                .det_number {
+                    width: 500px;
+                    height: 80px;
+                    border: 1px solid #ccc;
+                    margin-top: 20px;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    label {
+                        font-size: 14px;
+                        color: #999;
+                        // margin-right: 24px;
+                        margin-left: 10px;
+                        min-width: 4em;
+                        display: inline-block;
+                        text-align: justify;
+                        height: 14px;
+                        margin-top: 40px;
+                    }
+                    .btn-num-reduce {
+                        width: 40px;
+                        height: 30px;
+                        float: left;
+                        border: 1px solid #C6C6C6;
+                        margin-right: -246px;
+                        margin-left: -130px;
+                        text-align: center;
+                        line-height: 30px;
+                    }
+                    .btn-num a.disable {
+                        // color: #ccc;
+                        margin-left: 60px;
+                        cursor: not-allowed;
+                    }
+                    .btn-num-add {
+                        width: 40px;
+                        height: 30px;
+                        float: left;
+                        border: 1px solid #C6C6C6;
+                        float: right;
+                        margin-left: -208px;
+                        text-align: center;
+                        line-height: 30px;
+                        // border-left: 1px solid #C6C6C6;
+                        // margin-right: 207px;
+                    }
+                    .input-txt {
+                        width: 50px;
+                        height: 30px;
+                        margin-left: 13px;
+                        margin-right: -25px;
+                        // margin-top: 10px;
+                        line-height: 32px;
+                        // border: none;
+                        text-align: center;
+                        outline: none;
+                    }
+                }
+            }
+            .cart {
                 width: 500px;
-                height: 50px;
-                border: 1px solid red;
-            }
-        }
-        // 右边盒子的数量显示
-        .det_number {
-            width: 500px;
-            height: 150px;
-            border: 1px solid #ccc;
-        }
-        //购物车部分
-        .cart {
-            width: 500px;
-            // border: 1px solid #000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            text-align: center;
-            line-height: 45px;
-            // margin-top: 400px;
-            //购买和加入购物车
-            .buy {
-                width: 260px;
-                // background: red;
+                // border: 1px solid #000;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                a {
-                    width: 134px;
-                    height: 45px;
-                    text-decoration: none;
-                    color: #fff;
-                    cursor: pointer;
-                    margin-right: 15px;
-                    background: #dd3e3f;
-                    font-size: 16px;
+                text-align: center;
+                line-height: 45px;
+                // margin-top: 400px;
+                .buy {
+                    width: 260px;
+                    // background: red;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    a {
+                        width: 134px;
+                        height: 45px;
+                        text-decoration: none;
+                        color: #fff;
+                        cursor: pointer;
+                        margin-right: -40px;
+                        background: #dd3e3f;
+                        font-size: 16px;
+                    }
                 }
                 button {
                     width: 134px;
@@ -112,13 +225,10 @@ $border:1px solid #ccc;
                     cursor: pointer;
                     border: none;
                 }
-            }
-            //收藏商品 
-            .shangp {
-                width: 100px;
-                // background: orange;
-                cursor: pointer;
+                .shangp {
+                    width: 100px;
+                    // background: orange;
+                    cursor: pointer;
+                }
             }
         }
-    }
-}

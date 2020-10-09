@@ -7,11 +7,25 @@
     <title>丰趣详情页</title>
     <script src="./script/require.js" data-main="./script/main.js" defer async="true" id="currentpage" data-page="detail_module"></script>
     <link rel="stylesheet" href="./css/detail.css">
+    <link rel="stylesheet" href="./font/iconfont.css">
+    <link rel="stylesheet" href="./font/iconfont (2).css">
+    <script src="./font/iconfont.js"></script>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+    </style>
+    <style>
+        .icon {
+            width: 2.5em;
+            height: 2.5em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+            margin-left: 10px;
+            color: red;
         }
     </style>
 </head>
@@ -95,32 +109,79 @@
         <!-- <div>购物车</div> -->
     </div>
     <!-- 将搜索部分和导航栏放在一个盒子里面 -->
-    <div style="background: #fff; box-shadow:3px 4px #eee; margin-bottom: 10px;">
+    <div style="background: #fff; box-shadow:3px 4px #eee; margin-bottom: 90px;">
         <!-- 头顶部的搜索部分 -->
         <div class="top_search">
-            <div class="top_search ">
+            <div class="top_search " style="margin: 5px auto;">
                 <!-- 搜索部分的左边 -->
-                <div class="top_search_left" style="margin-left: 200px;">
-                    <img src="https://img0.fengqucdn.com/cmsres/20170329/030eede1-1185-4a2d-a2b6-c9c5a43316df.svg" alt="">
+                <div class="top_search_left" style="margin-left: 30px;">
+                    <img src="https://img0.fengqucdn.com/cmsres/20170329/030eede1-1185-4a2d-a2b6-c9c5a43316df.svg" alt="" class="img3">
                 </div>
                 <!-- 搜索部分的右边 -->
-                <div class="top_search_right" style="margin-top: 42px;">
+                <div class="top_search_right" style="margin-top: 20px;">
                     <!-- 右边的第一部分搜索框-->
                     <section class="top_search_right1">
-                        <span><input type="text" class="input"></span>
+                        <div>
+                            <input type="text" class="top-search-input fl">
+                            <a href="" class="top-search-btn fl" style="line-height: 38px;">搜索</a>
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="#">奶粉</a>
+
+                            </li>
+                            <li>
+                                <a href="#"> 面膜</a>
+
+                            </li>
+                            <li>
+                                <a href="#"> 纸尿裤</a>
+
+                            </li>
+                            <li>
+                                <a href="#"> 乐而雅</a>
+
+                            </li>
+                            <li>
+                                <a href="#">防晒</a>
+
+                            </li>
+                            <li>
+                                <a href="#">爽肤水</a>
+
+                            </li>
+                            <li>
+                                <a href="#">Skin</a>
+
+                            </li>
+                            <li>
+                                <a href="#">DHC</a>
+
+                            </li>
+                        </ul>
                     </section>
                     <!-- 右边第二部分购物车 -->
                     <section class="top_search_right2">
-                        <section class="cart"></section>
+                        <a href="#">
+                            <span class="cart-num">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-gouwuchekong
+                                    "></use>
+                                  </svg>
+                            </span>
+                            <span class="cart-item">
+                                去购物车结算
+                            </span>
+                        </a>
                     </section>
                 </div>
             </div>
         </div>
         <!-- 导航栏 -->
-        <div class="middle">
+        <div class="middle" style="margin: -40px auto;">
             <!-- 导航栏部分 -->
             <div class="top_nav ">
-                <ul class="top_nav_left" style="margin-left: -40px;">
+                <ul class="top_nav_left" style="margin-left: 10px;">
                     <li>
                         <a href="" class="active">首页</a>
                     </li>
@@ -162,32 +223,65 @@
     <div class="detcenter">
         <!-- 商品右边的结构 -->
         <div class="det_left">
-            <img src="https://img0.fengqucdn.com/sf/skuInfos/1002786/292aa975539b03fba88e81a7399c8309.jpeg@640h_640w_1c_1e" alt="">
+            <img src="" alt="" id="smaller">
+            <!-- <img src="" alt=""> -->
         </div>
         <!-- 商品中间的结构 -->
         <div class="det_mid">
-            <img src="https://img0.fengqucdn.com/sf/skuInfos/1002786/292aa975539b03fba88e81a7399c8309.jpeg@640h_640w_1c_1e" alt="">
+            <div class="wrap">
+                <div id="spic">
+                    <img src="" alt="" id="smallpic">
+                    <div id="sf"></div>
+                </div>
+                <div id="bf">
+                    <img src="" alt="" id="bpic">
+                </div>
+            </div>
         </div>
         <!-- 商品左边的结构 -->
         <div class="det_right">
             <!-- 标题 -->
-            <span class="det_title">标题</span>
-            <!-- 倒计时 -->
-            <section class="det_date">
-                <section class="shangou">闪购</section>
-                <section class="date">倒计时</section>
-            </section>
+            <!-- <span class="det_title">
+               <h3 >【修饰泛红肌】韩国LANEIGE兰芝 雪纱防晒隔离霜 绿色 30ml</h3>
+               <p>完全无油配方还可以调整肤色，带防晒指数。隔离防晒一步完成。充分做到隔离彩妆、脏空气、紫外线。也可作为粉底使用，质地轻盈，涂抹容易，附着力佳，可阻隔UVA/UVB辐射。</p>
+            </span> -->
+
+
+            <div class="p-name">
+                <a class="loadtitle" href="##"></a>
+            </div>
+            <div class="p-price"><strong><em>￥</em><i class="loadpcp"></i></strong></div>
+
             <!-- 数量 -->
-            <span class="det_number">数量</span>
+            <div class="det_number">
+                <div class="label">数量</div>
+                <div class=" btn-num-reduce disable">
+                    -
+                </div>
+                <div>
+                    <input type="text" value="1" class="input-txt">
+                </div>
+                <div class="btn-num-add">
+                    +
+                </div>
+            </div>
 
             <!-- 加入购物车，收藏，购买 -->
             <div class="cart">
                 <section class="buy">
-                    <a href="#">立即购买</a>
-                    <button>加入购物车</button>
+                    <a href="#" style="margin-top: 20px;">立即购买</a>
+                    <!-- <a href="cart.html">
+                        <button>加入购物车</button>
+                    </a> -->
+                    <div class="p-btn">
+                        <a href="cart.html" style="background:  #ff8140;">加入购物车</a>
+
+                    </div>
+
+
                 </section>
                 <section class="shangp">
-                    <i></i> 收藏商品
+                    <span class="iconfont icon-wujiaoxing" style="font-size: 1.5em;text-align: center;"></span>收藏商品
                 </section>
             </div>
 
@@ -199,28 +293,89 @@
         <div class="bottom_detail ">
             <ul>
                 <li>
-                    <span>图片</span> 正品原汁原味
+                    <span class="iconfont icon-diqiu"></span> 正品原汁原味
                 </li>
                 <li>
-                    <span>图片</span> 国检监督入仓
+                    <span class="iconfont icon-gouwuchekong"></span> 国检监督入仓
                 </li>
                 <li>
-                    <span>图片</span> 快速请关报备
+                    <span class="iconfont icon-liebiao"></span> 快速请关报备
                 </li>
                 <li>
-                    <span>图片</span> 国内物流配送
+                    <span class="iconfont icon-che"></span> 国内物流配送
                 </li>
                 <li class="detail_li">
-                    <span>图片</span> 用户确认收货
+                    <span class="iconfont icon-baoguo02 "></span> 用户确认收货
                 </li>
             </ul>
         </div>
         <!-- 尾部一些信息，微信QQ这几类 -->
         <div class="bottom_information ">
-            <section class="infor_left"></section>
-            <section class="infor_mid"></section>
-            <section class="infor_right"></section>
+            <section class="infor_left">
+                <div class="infor1">
+                    <img src="https://img0.fengqucdn.com/cmsres/20170329/030eede1-1185-4a2d-a2b6-c9c5a43316df.svg" alt="" style="width: 300px;height: 130px;">
+                </div>
+                <div class="infor2">
+                    <span style="margin-right: 10px;font-size: 12px;">关于我们</span>
+                    <!-- 微博 -->
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-weibo"></use>
+                      </svg>
+                    <!-- 微信 -->
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-weixin
+                        "></use>
+                      </svg>
+                </div>
+            </section>
+            <!-- 中间的文字部分 -->
+            <section class="infor_mid">
+                <div>
+                    <div>
+                        <h3 style="font-weight: 10;color:#3E3A39;margin-bottom: 40px;">丰趣海淘</h3>
+                    </div>
+                    <div>
+                        <p style="font-size: 12px;color: #999;margin-bottom: 5px;">关于我们</p>
+                        <p style="font-size: 12px;color: #999;margin-bottom: 5px;">法律政策</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h3 style="font-weight: 10;color:#3E3A39;margin-bottom: 3px;">新手指南</h3>
+                    </div>
+                    <div>
+                        <p style="font-size: 12px;color: #999;padding-top: 5px;">正品保证</p>
+                        <p style="font-size: 12px;color: #999;margin-bottom: 10px;margin-top: 10px;">购物指南</p>
+                        <p style="font-size: 12px;color: #999;margin-bottom: 10px;margin-top: 10px;">费用说明</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h3 style="font-weight: 10;color:#3E3A39;margin-bottom: 30px;">帮助中心</h3>
+                    </div>
+                    <div>
+                        <p style="font-size: 12px;color: #999;margin-bottom: 10px;">签收说明</p>
+                        <p style="font-size: 12px;color: #999;margin-bottom: 10px;">运输时效</p>
+                    </div>
+
+                </div>
+                <div>
+                    <div>
+                        <h3 style="font-weight: 10;color:#3E3A39;margin-top: 5px;">联系我们</h3>
+                    </div>
+                    <div style="margin-top: 10px;">
+                        <p style="font-size: 12px;color: #999;margin-bottom: 10px;">在线客服(周一至周日 9:00-21:00)</p>
+                        <p style="font-size: 12px;color: #999;margin-bottom: 10px;">客服中心</p>
+                        <p style="font-size: 12px;color: #999;margin-bottom: 10px;">加入我们</p>
+                    </div>
+                </div>
+            </section>
+            <section class="infor_right">
+                <p>扫一扫下载APP</p>
+                <img src="" alt="">
+            </section>
         </div>
+
     </div>
 </body>
 

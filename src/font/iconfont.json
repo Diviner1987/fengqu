@@ -1,0 +1,58 @@
+{
+  "id": "2115878",
+  "name": "fenqu",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1306",
+      "name": "购物车空",
+      "font_class": "gouwuchekong",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "954024",
+      "name": "列表",
+      "font_class": "liebiao",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "2570133",
+      "name": "车",
+      "font_class": "che",
+      "unicode": "e65b",
+      "unicode_decimal": 58971
+    },
+    {
+      "icon_id": "8348113",
+      "name": "地球",
+      "font_class": "diqiu",
+      "unicode": "e719",
+      "unicode_decimal": 59161
+    },
+    {
+      "icon_id": "8759844",
+      "name": "weixin",
+      "font_class": "weixin",
+      "unicode": "e699",
+      "unicode_decimal": 59033
+    },
+    {
+      "icon_id": "9186712",
+      "name": "微博",
+      "font_class": "weibo",
+      "unicode": "e666",
+      "unicode_decimal": 58982
+    },
+    {
+      "icon_id": "15282621",
+      "name": "包裹02",
+      "font_class": "baoguo02",
+      "unicode": "e6b9",
+      "unicode_decimal": 59065
+    }
+  ]
+}

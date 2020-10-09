@@ -272,6 +272,7 @@ $top_nav_right_padding:40px; //导航栏右边的padding
     justify-content: $justify;
     align-items: $align;
     @include flex_direction_lr;
+    margin-bottom: 20px;
 }
 
 //导航栏左边部分
@@ -376,99 +377,45 @@ $top_nav_right_padding:40px; //导航栏右边的padding
                 height: 335px;
             }
         }
-        //主内容底部左边       
-        .main_day_left {
-            //左边li设为样式
-            li {
-                @include borderstyle;
-                @include float;
-                @include list;
-                width: 235px;
-                @include main_day_left_lih;
-                //显示省略号
-                @include white-space;
-                @include overflow-hidden;
-                @include text-overflow;
-                @include line-height;
-            }
-            //单独选择一个li来进行加样式
-            li:first-child {
-                margin-left: 472px;
-            }
-            //每个li里面的图片和标题还有价格
-            .li_imgs {
-                .imgs {
-                    @include imgsh;
-                    @include img_margin;
-                }
-                .title {
-                    @include text-align;
-                    @include line-height;
-                    text-decoration: none;
-                    color: #333;
-                }
-                .price {
-                    // @include text-align;
-                    // @include line-height;
-                    @include price_color;
-                    @include price_margin;
-                }
-            }
-        }
         //固定的图片的样式
-        //主内容底部右边
-        .main_digital_right {
-            //主内容底部右边
-            // width: 192px;
-            width: 245px;
-            @include main_day_right_height;
-            @include borderstyle;
-            //右边的span内填充
-            .main_day_r_span {
-                @include main_day_r_span_margin;
-            }
-            .main_day_r_ul {
-                // width: 192px;
-                @include main_day_r_ulh;
-                @include right_center_li;
-                //右边的li的样式
-                li {
-                    @include list;
-                    @include main_day_r_li;
-                    @include main_day_r_ulborder;
-                    @include display; //弹性盒
-                    justify-content: $justify; //主轴
-                    align-items: $align;
-                    @include flex_direction_lr;
-                    .redtitle {
-                        width: 44px;
-                        height: 38px;
-                        background: url(https://img0.fengqucdn.com/cmsres/20150924/74cbbfb5-7c18-4933-a31a-5209a16deb13.png) no-repeat;
-                        top: 40px;
-                    }
-                    //海外代购的图片宽高
-                }
-            }
-            .main_day_r_ul .seabuy {
-                @include seabuy_widht;
-                @include seabuy_height;
-            }
-            //段落的显示省略号
-            .seabuy_p_dot {
-                @include ellipsis_width;
-                @include white-space;
-                @include overflow-hidden;
-                @include text-overflow;
-                @include line-height;
-                cursor: pointer;
-            }
-            //海外代购价钱的颜色
-            .seabuy_color {
-                .seabuy_span_color {
-                    @include price_color;
-                }
-            }
+    }
+}
+
+//主内容底部左边       
+.main_day_left {
+    //左边li设为样式
+    li {
+        @include borderstyle;
+        @include float;
+        @include list;
+        width: 235px;
+        @include main_day_left_lih;
+        border-right: none;
+        img {
+            @include imgsh;
+            @include img_margin;
         }
+        p {
+            @include text-align;
+            @include line-height;
+            //显示省略号
+            width: 200px;
+            @include white-space;
+            @include overflow-hidden;
+            @include text-overflow;
+            @include line-height;
+            display: block;
+            margin: 0 auto;
+            margin-top: 10px;
+        }
+        span {
+            color: #dc3334;
+            @include price_margin;
+        }
+    }
+    //单独选择一个li来进行加样式
+    li:first-child {
+        margin-left: 472px;
     }
 }
 
@@ -529,38 +476,6 @@ $top_nav_right_padding:40px; //导航栏右边的padding
                 height: 335px;
             }
         }
-        //主内容底部左边       
-        .main_day_left {
-            //左边li设为样式
-            li {
-                @include borderstyle;
-                @include float;
-                @include list;
-                width: 236px;
-                @include main_day_left_lih;
-            }
-            //单独选择一个li来进行加样式
-            li:first-child {
-                margin-left: 472px;
-            }
-            //每个li里面的图片和标题还有价格
-            .imgs {
-                @include imgsw;
-                @include imgsh;
-                // @include img_margin;
-            }
-            .title {
-                @include text-align;
-                @include line-height;
-                text-decoration: none;
-            }
-            .price {
-                @include text-align;
-                @include line-height;
-                @include price_color;
-                @include price_margin;
-            }
-        }
         //主内容底部右边
         .main_digital_right {
             //主内容底部右边
@@ -606,6 +521,51 @@ $top_nav_right_padding:40px; //导航栏右边的padding
                 @include price_color;
             }
         }
+    }
+}
+
+.main_digital_right {
+    //主内容底部右边
+    // width: 192px;
+    width: 243px;
+    @include main_day_right_height;
+    @include borderstyle;
+    //右边的span内填充
+    .main_day_r_span {
+        @include main_day_r_span_margin;
+    }
+    .main_day_r_ul {
+        // width: 192px;
+        @include main_day_r_ulh;
+        @include right_center_li;
+        //右边的li的样式
+        li {
+            @include list;
+            @include main_day_r_li;
+            @include main_day_r_ulborder;
+            @include display; //弹性盒
+            justify-content: $justify; //主轴
+            align-items: $align;
+            @include flex_direction_lr;
+            //海外代购的图片宽高
+        }
+    }
+    .main_day_r_ul .seabuy {
+        @include seabuy_widht;
+        @include seabuy_height;
+    }
+    //段落的显示省略号
+    .seabuy_p_dot {
+        @include ellipsis_width;
+        @include white-space;
+        @include overflow-hidden;
+        @include text-overflow;
+        @include line-height;
+        cursor: pointer;
+    }
+    //海外代购价钱的颜色
+    .seabuy_color .seabuy_span_color {
+        @include price_color;
     }
 }
 
@@ -669,84 +629,7 @@ $top_nav_right_padding:40px; //导航栏右边的padding
                 height: 335px;
             }
         }
-        //主内容底部左边       
-        .main_day_left {
-            //左边li设为样式
-            li {
-                @include borderstyle;
-                @include float;
-                @include list;
-                width: 236px;
-                @include main_day_left_lih;
-            }
-            //单独选择一个li来进行加样式
-            li:first-child {
-                margin-left: 472px;
-            }
-            //每个li里面的图片和标题还有价格
-            .li_imgs {
-                .imgs {
-                    @include imgsw;
-                    @include imgsh;
-                    // @include img_margin;
-                }
-                .title {
-                    @include text-align;
-                    @include line-height;
-                }
-                .price {
-                    @include text-align;
-                    @include line-height;
-                    @include price_color;
-                    @include price_margin;
-                }
-            }
-        }
         //第二块底部的右边的ul的宽高
-        .main_digital_right {
-            //主内容底部右边
-            // width: 192px;
-            width: 243px;
-            @include main_day_right_height;
-            @include borderstyle;
-            //右边的span内填充
-            .main_day_r_span {
-                @include main_day_r_span_margin;
-            }
-            .main_day_r_ul {
-                // width: 192px;
-                @include main_day_r_ulh;
-                @include right_center_li;
-                //右边的li的样式
-                li {
-                    @include list;
-                    @include main_day_r_li;
-                    @include main_day_r_ulborder;
-                    @include display; //弹性盒
-                    justify-content: $justify; //主轴
-                    align-items: $align;
-                    @include flex_direction_lr;
-                    //海外代购的图片宽高
-                }
-            }
-            .main_day_r_ul .seabuy {
-                @include seabuy_widht;
-                @include seabuy_height;
-            }
-            //段落的显示省略号
-            .seabuy_p_dot {
-                @include ellipsis_width;
-                @include white-space;
-                @include overflow-hidden;
-                @include text-overflow;
-                @include line-height;
-                cursor: pointer;
-            }
-            //海外代购价钱的颜色
-            .seabuy_color .seabuy_span_color {
-                @include price_color;
-            }
-        }
     }
 }
 
@@ -810,83 +693,6 @@ $top_nav_right_padding:40px; //导航栏右边的padding
                 height: 335px;
             }
         }
-        //主内容底部左边       
-        .main_day_left {
-            //左边li设为样式
-            li {
-                @include borderstyle;
-                @include float;
-                @include list;
-                width: 236px;
-                @include main_day_left_lih;
-            }
-            //单独选择一个li来进行加样式
-            li:first-child {
-                margin-left: 472px;
-            }
-            //每个li里面的图片和标题还有价格
-            .li_imgs {
-                .imgs {
-                    @include imgsw;
-                    @include imgsh;
-                    // @include img_margin;
-                }
-                .title {
-                    @include text-align;
-                    @include line-height;
-                }
-                .price {
-                    @include text-align;
-                    @include line-height;
-                    @include price_color;
-                    @include price_margin;
-                }
-            }
-        }
-        .main_digital_right {
-            //主内容底部右边
-            // width: 192px;
-            width: 243px;
-            @include main_day_right_height;
-            @include borderstyle;
-            //右边的span内填充
-            .main_day_r_span {
-                @include main_day_r_span_margin;
-            }
-            .main_day_r_ul {
-                // width: 192px;
-                @include main_day_r_ulh;
-                @include right_center_li;
-                //右边的li的样式
-                li {
-                    @include list;
-                    @include main_day_r_li;
-                    @include main_day_r_ulborder;
-                    @include display; //弹性盒
-                    justify-content: $justify; //主轴
-                    align-items: $align;
-                    @include flex_direction_lr;
-                    //海外代购的图片宽高
-                }
-            }
-            .main_day_r_ul .seabuy {
-                @include seabuy_widht;
-                @include seabuy_height;
-            }
-            //段落的显示省略号
-            .seabuy_p_dot {
-                @include ellipsis_width;
-                @include white-space;
-                @include overflow-hidden;
-                @include text-overflow;
-                @include line-height;
-                cursor: pointer;
-            }
-            //海外代购价钱的颜色
-            .seabuy_color .seabuy_span_color {
-                @include price_color;
-            }
-        }
     }
 }
 
@@ -912,7 +718,9 @@ $top_nav_right_padding:40px; //导航栏右边的padding
         @include flex_direction_lr;
         //主内容顶部导航栏左边盒子
         .main_top_nav_l {
-            @include main_top_nav_l_span;
+            // @include main_top_nav_l_span;
+            display: flex;
+            align-items: center;
         }
         //主内容顶部导航栏右边盒子
         .main_top_nav_r {
@@ -951,88 +759,40 @@ $top_nav_right_padding:40px; //导航栏右边的padding
                 height: 335px;
             }
         }
-        //主内容底部左边       
-        .main_day_left {
-            //左边li设为样式
-            li {
-                @include borderstyle;
-                @include float;
-                @include list;
-                width: 236px;
-                @include main_day_left_lih;
-            }
-            //单独选择一个li来进行加样式
-            li:first-child {
-                margin-left: 472px;
-            }
-            //每个li里面的图片和标题还有价格
-            .li_imgs {
-                .imgs {
-                    @include imgsw;
-                    @include imgsh;
-                    // @include img_margin;
-                }
-                .title {
-                    @include text-align;
-                    @include line-height;
-                }
-                .price {
-                    @include text-align;
-                    @include line-height;
-                    @include price_color;
-                    @include price_margin;
-                }
-            }
-        }
-        //主内容底部右边
-        .main_digital_right {
-            width: 243px;
-            @include main_day_right_height;
-            @include borderstyle;
-            //右边的span内填充
-            .main_day_r_span {
-                @include main_day_r_span_margin;
-            }
-            //右边的ul 的宽高
-            .main_day_r_ul {
-                // width: 192px;
-                @include main_day_r_ulh;
-                @include right_center_li;
-                //右边的li的样式
-                li {
-                    @include list;
-                    @include main_day_r_li;
-                    @include main_day_r_ulborder;
-                    @include display; //弹性盒
-                    justify-content: $justify; //主轴
-                    align-items: $align;
-                    @include flex_direction_lr;
-                    //海外代购的图片宽高
-                }
-            }
-            .main_day_r_ul .seabuy {
-                @include seabuy_widht;
-                @include seabuy_height;
-            }
-            //段落的显示省略号
-            .seabuy_p_dot {
-                @include ellipsis_width;
-                @include white-space;
-                @include overflow-hidden;
-                @include text-overflow;
-                @include line-height;
-                cursor: pointer;
-            }
-            //海外代购价钱的颜色
-            .seabuy_color .seabuy_span_color {
-                @include price_color;
-            }
-        }
     }
 }
 
+// 轮播图
 .lunbo {
     width: 100%;
     height: 400px;
     background: url(https://img0.fengqucdn.com/cmsres/20190830/422755e3-3d5d-4349-a7f8-0e53bd9cda6f.png) no-repeat center top;
+    margin-bottom: 50px;
+    a {
+        cursor: pointer;
+        text-decoration: none;
+    }
 }
+
+// 排序
+// .sort {
+//     width: 300px;
+//     height: 50px;
+//     margin-bottom: 20px;
+//     margin: 10px 190px;
+//     display: flex;
+//     justify-content: space-around;
+//     align-items: center;
+//     .sort1 {
+//         width: 100px;
+//         height: 30px;
+//         text-align: center;
+//         line-height: 30px;
+//         border: 1px solid #ccc;
+//         margin-left: 10px;
+//         border-radius: 3px;
+//         background: #eee;
+//         outline-color: white;
+//         // padding-left: 10px;
+//     }
+// }
